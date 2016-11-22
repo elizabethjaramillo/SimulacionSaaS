@@ -16,38 +16,20 @@
                 <p:tab id="personal" title="Proveedor">
                     <p:panel header="Personal Detalles">
                         <p:messages />
-                        <h:panelGrid columns="2" columnClasses="label, value">
-                            <h:outputText value="Firstname: *" />
-                            <p:inputText value="#{userWizard.user.firstname}" required="true" label="Firstname"/>
-
-                            <h:outputText value="Lastname: *" />
-                            <p:inputText value="#{userWizard.user.lastname}" required="true" label="Lastname"/>
-
-                            <h:outputText value="Age: " />
-                            <p:inputText value="#{userWizard.user.age}" />
-
-                            <h:outputText value="Skip to last: " />
-                            <h:selectBooleanCheckbox value="#{userWizard.skip}" />
+                        <h:panelGrid columns="2" columnClasses="label, value">                            
+                            <p:selectOneRadio >
+                                <f:selectItem itemLabel="0-2 años" itemValue="Xbox One" />
+                                <f:selectItem itemLabel="3-5 años" itemValue="PS4" />
+                                <f:selectItem itemLabel="5-10 años" itemValue="Wii U" />
+                                <f:selectItem itemLabel="más de 10 años" itemValue="Wii U" />
+                            </p:selectOneRadio>                            
                         </h:panelGrid>
                     </p:panel>
                 </p:tab>
 
-                <p:tab id="address" title="Address">
-                    <p:panel header="Address Details">
-                        <p:messages />
-                        <h:panelGrid columns="2" columnClasses="label, value">
-                            <h:outputText value="Street: " />
-                            <p:inputText value="#{userWizard.user.street}" />
-
-                            <h:outputText value="Postal Code: " />
-                            <p:inputText value="#{userWizard.user.postalCode}" />
-
-                            <h:outputText value="City: " />
-                            <p:inputText value="#{userWizard.user.city}" />
-
-                            <h:outputText value="Skip to last: " />
-                            <h:selectBooleanCheckbox value="#{userWizard.skip}" />
-                        </h:panelGrid>
+                <p:tab id="address" title="Contrato">
+                    <p:panel header="Tipo de Contrato">
+                        <p:messages />                        
                     </p:panel>
                 </p:tab>
 
