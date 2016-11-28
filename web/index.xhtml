@@ -1,126 +1,122 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-                template="./template/plantilla.xhtml" 
-                xmlns:h="http://xmlns.jcp.org/jsf/html"
-                xmlns:p="http://primefaces.org/ui"
-                xmlns:f="http://xmlns.jcp.org/jsf/core">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
 
-    <ui:define name="content">
+    <body>
 
-        <h:form>
+        <ui:composition template="template/template.xhtml">
 
-            <p:growl id="growl" sticky="true" showDetail="true"/>
-
-            <p:wizard flowListener="#{userWizard.onFlowProcess}">
-                <p:tab id="personal" title="Proveedor">
-                    <p:panel header="Personal Detalles">
-                        <p:messages />
-                        <h:panelGrid columns="2" columnClasses="label, value">                            
-                            <p:selectOneRadio >
-                                <f:selectItem itemLabel="0-2 años" itemValue="0.2" />
-                                <f:selectItem itemLabel="3-5 años" itemValue="0.4" />
-                                <f:selectItem itemLabel="5-10 años" itemValue="0.5" />
-                                <f:selectItem itemLabel="más de 10 años" itemValue="1" />
-                            </p:selectOneRadio>                            
-                        </h:panelGrid>
-                    </p:panel>
-                </p:tab>
-
-                <p:tab id="address" title="Contrato">
-                    <p:panel header="Tipo de Contrato">
-                        <p:messages />  
-                        <h:panelGrid columns="2" columnClasses="label, value">                            
-                            <p:selectOneRadio>
-                                <f:selectItem itemLabel="Adhesion" itemValue="0.7" />
-                                <f:selectItem itemLabel="Negociada" itemValue="0.3" />
-                            </p:selectOneRadio>                            
-                        </h:panelGrid>
-                    </p:panel>
-                </p:tab>
-                <p:tab id="addresssss" title="Contratsso">
-                    <p:panel header="Tipo de Contrsssato">
-                        <p:messages />  
-                        <h:panelGrid columns="2" columnClasses="label, value">                            
-                            <p:selectOneRadio>
-                                <f:selectItem itemLabel="Adhesion" itemValue="0.7" />
-                                <f:selectItem itemLabel="Negociada" itemValue="0.3" />
-                            </p:selectOneRadio>                            
-                        </h:panelGrid>
-                    </p:panel>
-                </p:tab>
-
-                <p:tab id="contact" title="Contact">
-                    <p:panel header="Contact Information">
-                        <p:messages />
-                        <h:outputText value="Email: *" />
-                        <h:panelGrid columns="2" columnClasses="label, value">
-                            <p:selectOneRadio>
-                                <f:selectItem itemLabel="Adhesion" itemValue="0.7" />
-                                <f:selectItem itemLabel="Negociada" itemValue="0.3" />
-                            </p:selectOneRadio> 
-                            <!--h:outputText value="Email: *" />
-                            <p:inputText value="#{userWizard.user.email}" required="true" label="Email"/>
-                            <p:inputText value=" " required="true" label="Email"/-->
+            <ui:define name="content">
+                <center><h2>VERIFICAR CONFIABILIDAD </h2></center><hr/>
+                <h:panelGrid id="panelAdministracionUsuario" columns="1" cellspacing="25px">
 
 
-                            <!--h:outputText value="Phone: " />
-                            <p:inputText value="#{userWizard.user.phone}"/>
+                    <h:form id="frmDatosUsuario">
 
-                            <h:outputText value="Additional Info: " />
-                            <p:inputText value="#{userWizard.user.info}"/-->
-                        </h:panelGrid>
-                    </p:panel>
-                </p:tab>
+                        <p:growl id="mensajeGeneral" showDetail="true" sticky="true"/>
+                        <p:wizard flowListener="#{userWizard.onFlowProcess}">
+                            <p:tab id="personal" title="Proveedor">
+                                <p:panel header="Información">                                    
+                                    <p:outputLabel value="Cuenta con un proveedor:"/>          
+                                    <p:selectOneRadio id="radioCuenta" value="#{userWizard.cuentaprovedor}">
+                                        <f:selectItem itemLabel="Si" itemValue="true"/> 
+                                        <f:selectItem itemLabel="No" itemValue="false"/>
+                                    </p:selectOneRadio>
+                                </p:panel>
+                            </p:tab>
+                            <p:tab id="detalles" title="Info Proveedor">
+                                <p:panel header="Contrato Detalles">                                    
+                                    <p:outputLabel value="Seleccione la experiencia del proveedor:"/>          
+                                    <h:panelGrid columns="2" columnClasses="label, value">                            
+                                        <p:selectOneRadio >
+                                            <f:selectItem itemLabel="0-2 años" itemValue="0.2" />
+                                            <f:selectItem itemLabel="3-5 años" itemValue="0.4" />
+                                            <f:selectItem itemLabel="5-10 años" itemValue="0.5" />
+                                            <f:selectItem itemLabel="más de 10 años" itemValue="1" />
+                                        </p:selectOneRadio>                                                                    
+                                    </h:panelGrid>
+                                    <p:outputLabel value="Tipo de Contrato:"/>          
+                                    <p:selectOneRadio  value="#{userWizard.tipocontrato}">
+                                        <f:selectItem itemLabel="Adhesion" itemValue="1"/> 
+                                        <f:selectItem itemLabel="Negociada" itemValue="2"/>
+                                    </p:selectOneRadio>
+                                </p:panel>
+                            </p:tab>
+                            <p:tab id="clausulas" title="Clausulas">
+                                <p:panel header="CLAUSULAS DE CONTRATO">                                    
 
-                <p:tab id="confirm" title="Confirmation">
-                    <p:panel header="Confirmation">
-                        <h:panelGrid id="confirmation" columns="3" columnClasses="grid,grid,grid">
-                            <h:panelGrid columns="2" columnClasses="label, value">
-                                <h:outputText value="Firstname: " />
-                                <h:outputText value="#{userWizard.user.firstname}" styleClass="outputLabel"/>
+                                    <p:selectManyCheckbox id="clusua" value="#{userWizard.selectedClausulas}" layout="grid" columns="2">
+                                        <f:selectItem itemLabel="Plan continuidad" itemValue="Xbox One" />
+                                        <f:selectItem itemLabel="Terminacion de Modificacion" itemValue="PS4" />
+                                        <f:selectItem itemLabel="Confidencialidad" itemValue="Wii U" />
+                                        <f:selectItem itemLabel="Disponibilidad" itemValue="Wii U" />
+                                        <f:selectItem itemLabel="Rendimiento" itemValue="Xbox One" />
+                                        <f:selectItem itemLabel="Suspencion de Servicio" itemValue="PS4" />
+                                        <f:selectItem itemLabel="Servicio de Soporte" itemValue="Wii U" />
+                                        <f:selectItem itemLabel="Seguridad" itemValue="Wii U" />
+                                        <f:selectItem itemLabel="Privacidad de Cumplimiento" itemValue="PS4" />
+                                        <f:selectItem itemLabel="Pagos" itemValue="PS4" />
+                                    </p:selectManyCheckbox>
+                                </p:panel>
+                                <p:panel header="ACUERDO NIVEL SERVICIO">                                  
+                                    <p:selectManyCheckbox id="contratoA" value="#{userWizard.selectedAcuerdos}" layout="grid" columns="2">
+                                        <f:selectItem itemLabel="Recuperacion de datos" itemValue="Xbox One" />
+                                        <f:selectItem itemLabel="Viabilidad a largo plazo" itemValue="PS4" />
+                                        <f:selectItem itemLabel="Acceso de usuarios privilegiados" itemValue="Wii U" />
+                                        <f:selectItem itemLabel="Ubicacion de Datos" itemValue="Wii U" />
+                                    </p:selectManyCheckbox>
+                                </p:panel>
+                            </p:tab>
+                            <p:tab id="adicionales" title="Cuestionamientos Adicionales">
+                                <p:panel header="Medidas de seguridad exigibles">                                    
+                                    <p:selectManyCheckbox id="medidadS" value="#{checkboxView.selectedConsoles}" layout="grid" columns="2">
+                                        <f:selectItem itemLabel="Requerimiento de contraseña" itemValue="Xbox One" />
+                                        <f:selectItem itemLabel="Restrigir numero e intentos" itemValue="PS4" />
+                                        <f:selectItem itemLabel="Certificado SSL" itemValue="Wii U" />
+                                        <f:selectItem itemLabel="Datos Cifrados" itemValue="Wii U" />
+                                        <f:selectItem itemLabel="Cifrado SSL" itemValue="Xbox One" />
+                                        <f:selectItem itemLabel="MAC" itemValue="PS4" />
+                                        <f:selectItem itemLabel="Pregunta de Seguridad" itemValue="Wii U" />
+                                        <f:selectItem itemLabel="Lista Blanca de URL" itemValue="Wii U" />
+                                        <f:selectItem itemLabel="OTL" itemValue="PS4" />
+                                        <f:selectItem itemLabel="SSO" itemValue="PS4" />
+                                        <f:selectItem itemLabel="Exquema DB" itemValue="PS4" />
+                                        <f:selectItem itemLabel="Protocolo de Tranferencia" itemValue="PS4" />
+                                    </p:selectManyCheckbox>
+                                    <h:panelGroup></h:panelGroup>
+                                    <p:outputLabel value="Seleccionar Tipo de Exquema DB:"/>  
+                                    <p:selectManyCheckbox id="exquemabd" value="#{checkboxView.selectedConsoles}" layout="grid" columns="4">
+                                        <f:selectItem itemLabel="STSI" itemValue="Xbox One" />
+                                        <f:selectItem itemLabel="ITSI" itemValue="PS4" />
+                                        <f:selectItem itemLabel="IDII" itemValue="Wii U" />
+                                    </p:selectManyCheckbox>
+                                    <h:panelGroup></h:panelGroup>
+                                    <p:outputLabel value=" Seleccionar Protocolo de Tranferencia:"/>  
 
-                                <h:outputText value="Lastname: " />
-                                <h:outputText value="#{userWizard.user.lastname}" styleClass="outputLabel"/>
-
-                                <h:outputText value="Age: " />
-                                <h:outputText value="#{userWizard.user.age}" styleClass="outputLabel"/>
-                            </h:panelGrid>
-
-                            <h:panelGrid columns="2" columnClasses="label, value">
-                                <h:outputText value="Street: " />
-                                <h:outputText value="#{userWizard.user.street}" styleClass="outputLabel"/>
-
-                                <h:outputText value="Postal: " />
-                                <h:outputText value="#{userWizard.user.postalCode}" styleClass="outputLabel"/>
-
-                                <h:outputText value="City: " />
-                                <h:outputText value="#{userWizard.user.city}" styleClass="outputLabel"/>
-                            </h:panelGrid>
-
-                            <h:panelGrid columns="2" columnClasses="label, value">
-                                <h:outputText value="Email: " />
-                                <h:outputText value="#{userWizard.user.email}" styleClass="outputLabel"/>
-
-                                <h:outputText value="Phone " />
-                                <h:outputText value="#{userWizard.user.phone}" styleClass="outputLabel"/>
-
-                                <h:outputText value="Info: " />
-                                <h:outputText value="#{userWizard.user.info}" styleClass="outputLabel"/>
-
-                                <h:outputText />
-                                <h:outputText />
-                            </h:panelGrid>
-                        </h:panelGrid>
-
-                        <p:commandButton value="Submit" actionListener="#{userWizard.save}" update="growl" process="@this"/>
-                    </p:panel>
-                </p:tab>
-            </p:wizard>
-
-        </h:form>
-
-
-    </ui:define>
-
-</ui:composition>
+                                    <p:selectManyCheckbox id="protocolo" value="#{checkboxView.selectedConsoles}" layout="grid" columns="4">
+                                        <f:selectItem itemLabel="HTTP" itemValue="Xbox One" />
+                                        <f:selectItem itemLabel="HTTPS" itemValue="PS4" />
+                                        <f:selectItem itemLabel="TLS" itemValue="Wii U" />
+                                        <f:selectItem itemLabel="SSH" itemValue="Wii U" />
+                                    </p:selectManyCheckbox>
+                                    <h:panelGroup></h:panelGroup>
+                                    <h:panelGroup></h:panelGroup>
+                                    <p:outputLabel value="Tipo de nube SaaS:"/>          
+                                    <p:selectOneRadio  value="#{beanRUsuario.usuario.genero}">
+                                        <f:selectItem itemLabel="Pública" itemValue="1"/> 
+                                        <f:selectItem itemLabel="Privada" itemValue="2"/>
+                                        <f:selectItem itemLabel="Hibrida" itemValue="3"/>
+                                    </p:selectOneRadio>
+                                </p:panel>
+                            </p:tab>
+                        </p:wizard>                     
+                    </h:form>
+                </h:panelGrid>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>
