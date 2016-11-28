@@ -18,10 +18,10 @@
                         <p:messages />
                         <h:panelGrid columns="2" columnClasses="label, value">                            
                             <p:selectOneRadio >
-                                <f:selectItem itemLabel="0-2 años" itemValue="Xbox One" />
-                                <f:selectItem itemLabel="3-5 años" itemValue="PS4" />
-                                <f:selectItem itemLabel="5-10 años" itemValue="Wii U" />
-                                <f:selectItem itemLabel="más de 10 años" itemValue="Wii U" />
+                                <f:selectItem itemLabel="0-2 años" itemValue="0.2" />
+                                <f:selectItem itemLabel="3-5 años" itemValue="0.4" />
+                                <f:selectItem itemLabel="5-10 años" itemValue="0.5" />
+                                <f:selectItem itemLabel="más de 10 años" itemValue="1" />
                             </p:selectOneRadio>                            
                         </h:panelGrid>
                     </p:panel>
@@ -29,22 +29,46 @@
 
                 <p:tab id="address" title="Contrato">
                     <p:panel header="Tipo de Contrato">
-                        <p:messages />                        
+                        <p:messages />  
+                        <h:panelGrid columns="2" columnClasses="label, value">                            
+                            <p:selectOneRadio>
+                                <f:selectItem itemLabel="Adhesion" itemValue="0.7" />
+                                <f:selectItem itemLabel="Negociada" itemValue="0.3" />
+                            </p:selectOneRadio>                            
+                        </h:panelGrid>
+                    </p:panel>
+                </p:tab>
+                <p:tab id="addresssss" title="Contratsso">
+                    <p:panel header="Tipo de Contrsssato">
+                        <p:messages />  
+                        <h:panelGrid columns="2" columnClasses="label, value">                            
+                            <p:selectOneRadio>
+                                <f:selectItem itemLabel="Adhesion" itemValue="0.7" />
+                                <f:selectItem itemLabel="Negociada" itemValue="0.3" />
+                            </p:selectOneRadio>                            
+                        </h:panelGrid>
                     </p:panel>
                 </p:tab>
 
                 <p:tab id="contact" title="Contact">
                     <p:panel header="Contact Information">
                         <p:messages />
+                        <h:outputText value="Email: *" />
                         <h:panelGrid columns="2" columnClasses="label, value">
-                            <h:outputText value="Email: *" />
+                            <p:selectOneRadio>
+                                <f:selectItem itemLabel="Adhesion" itemValue="0.7" />
+                                <f:selectItem itemLabel="Negociada" itemValue="0.3" />
+                            </p:selectOneRadio> 
+                            <!--h:outputText value="Email: *" />
                             <p:inputText value="#{userWizard.user.email}" required="true" label="Email"/>
+                            <p:inputText value=" " required="true" label="Email"/-->
 
-                            <h:outputText value="Phone: " />
+
+                            <!--h:outputText value="Phone: " />
                             <p:inputText value="#{userWizard.user.phone}"/>
 
                             <h:outputText value="Additional Info: " />
-                            <p:inputText value="#{userWizard.user.info}"/>
+                            <p:inputText value="#{userWizard.user.info}"/-->
                         </h:panelGrid>
                     </p:panel>
                 </p:tab>

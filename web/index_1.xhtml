@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="template/template.xhtml">
+
+            <ui:define name="content">
+                <center><h2>VERIFICAR CONFIABILIDA </h2></center><hr/>
+                <h:panelGrid id="panelAdministracionUsuario" columns="1" cellspacing="25px">
+
+
+                    <h:form id="frmDatosUsuario">
+                        <p:growl id="mensajeGeneral" showDetail="true" sticky="false"/>
+                        <h:panelGrid columns="1" id="panelDatosUsuario">
+                            <h:panelGrid columns="3">
+                                <p:outputLabel value="Cuenta con un proveedor:"/>          
+                                <p:selectOneRadio id="radioCuenta" value="#{beanRUsuario.usuario.genero}">
+                                    <f:selectItem itemLabel="Si" itemValue="1"/> 
+                                    <f:selectItem itemLabel="No" itemValue="2"/>
+                                </p:selectOneRadio>
+                                <h:panelGroup></h:panelGroup>
+
+                                <h3 style="margin-top:0px"> Medidas de seguriada exigibles </h3>
+                                <p:selectManyCheckbox id="medidadS" value="#{checkboxView.selectedConsoles}" layout="grid" columns="2">
+                                    <f:selectItem itemLabel="Requerimiento de contraseña" itemValue="Xbox One" />
+                                    <f:selectItem itemLabel="Restrigir numero e intentos" itemValue="PS4" />
+                                    <f:selectItem itemLabel="Certificado SSL" itemValue="Wii U" />
+                                    <f:selectItem itemLabel="Datos Cifrados" itemValue="Wii U" />
+                                    <f:selectItem itemLabel="Cifrado SSL" itemValue="Xbox One" />
+                                    <f:selectItem itemLabel="MAC" itemValue="PS4" />
+                                    <f:selectItem itemLabel="Pregunta de Seguridad" itemValue="Wii U" />
+                                    <f:selectItem itemLabel="Lista Blanca de URL" itemValue="Wii U" />
+                                    <f:selectItem itemLabel="OTL" itemValue="PS4" />
+                                    <f:selectItem itemLabel="SSO" itemValue="PS4" />
+                                    <f:selectItem itemLabel="Exquema DB" itemValue="PS4" />
+                                    <f:selectItem itemLabel="Protocolo de Tranferencia" itemValue="PS4" />
+                                </p:selectManyCheckbox>
+                                <h:panelGroup></h:panelGroup>
+                                <p:outputLabel value="Seleccionar Tipo de Exquema DB:"/>  
+                                <p:selectManyCheckbox id="exquemabd" value="#{checkboxView.selectedConsoles}" layout="grid" columns="4">
+                                    <f:selectItem itemLabel="STSI" itemValue="Xbox One" />
+                                    <f:selectItem itemLabel="ITSI" itemValue="PS4" />
+                                    <f:selectItem itemLabel="IDII" itemValue="Wii U" />
+                                </p:selectManyCheckbox>
+                                <h:panelGroup></h:panelGroup>
+                                <p:outputLabel value=" Seleccionar Protocolo de Tranferencia:"/>  
+
+                                <p:selectManyCheckbox id="protocolo" value="#{checkboxView.selectedConsoles}" layout="grid" columns="4">
+                                    <f:selectItem itemLabel="HTTP" itemValue="Xbox One" />
+                                    <f:selectItem itemLabel="HTTPS" itemValue="PS4" />
+                                    <f:selectItem itemLabel="TLS" itemValue="Wii U" />
+                                    <f:selectItem itemLabel="SSH" itemValue="Wii U" />
+                                </p:selectManyCheckbox>
+                                <h:panelGroup></h:panelGroup>
+
+
+                                <p:outputLabel value="Experiencia del proveedor:"/>          
+                                <p:selectOneRadio id="radioCuenta" value="#{beanRUsuario.usuario.genero}">
+                                    <f:selectItem itemLabel="0-2 años" itemValue="1"/> 
+                                    <f:selectItem itemLabel="3-5 años" itemValue="2"/>
+                                    <f:selectItem itemLabel="5-10años" itemValue="4"/>
+                                    <f:selectItem itemLabel="más de 10 años" itemValue="5"/>
+                                </p:selectOneRadio>
+                                <h:panelGroup></h:panelGroup>
+                                <p:outputLabel value="Tipo de nube SaaS:"/>          
+                                <p:selectOneRadio id="radioCuenta" value="#{beanRUsuario.usuario.genero}">
+                                    <f:selectItem itemLabel="Pública" itemValue="1"/> 
+                                    <f:selectItem itemLabel="Privada" itemValue="2"/>
+                                    <f:selectItem itemLabel="Hibrida" itemValue="3"/>
+                                </p:selectOneRadio>
+                                <h:panelGroup></h:panelGroup>
+                                <p:outputLabel value="Tipo de Contrato:"/>          
+                                <p:selectOneRadio id="radioCuenta" value="#{beanRUsuario.usuario.genero}">
+                                    <f:selectItem itemLabel="Adhesion" itemValue="1"/> 
+                                    <f:selectItem itemLabel="Negociada" itemValue="2"/>
+
+                                </p:selectOneRadio>
+                                <h:panelGroup></h:panelGroup>
+                                <p:outputLabel value="----------CONTRATO TIPO NEGOCIADO-------------" />
+                                <h:panelGroup></h:panelGroup><h:panelGroup></h:panelGroup>
+
+                                <p:outputLabel value="CLAUSULAS DE CONTRATO" />
+                                <p:selectManyCheckbox id="clusua" value="#{checkboxView.selectedConsoles}" layout="grid" columns="2">
+                                    <f:selectItem itemLabel="Plan continuidad" itemValue="Xbox One" />
+                                    <f:selectItem itemLabel="Terminacion de Modificacion" itemValue="PS4" />
+                                    <f:selectItem itemLabel="Confidencialidad" itemValue="Wii U" />
+                                    <f:selectItem itemLabel="Disponibilidad" itemValue="Wii U" />
+                                    <f:selectItem itemLabel="Rendimiento" itemValue="Xbox One" />
+                                    <f:selectItem itemLabel="Suspencion de Servicio" itemValue="PS4" />
+                                    <f:selectItem itemLabel="Servicio de Soporte" itemValue="Wii U" />
+                                    <f:selectItem itemLabel="Seguridad" itemValue="Wii U" />
+                                    <f:selectItem itemLabel="Privacidad de Cumplimiento" itemValue="PS4" />
+                                    <f:selectItem itemLabel="Pagos" itemValue="PS4" />
+                                </p:selectManyCheckbox>
+                                <h:panelGroup></h:panelGroup>
+
+                                <p:outputLabel value="----------CONTRATO TIPO ADHESION-------------" />
+                                <h:panelGroup></h:panelGroup><h:panelGroup></h:panelGroup>
+
+                                <p:outputLabel value="CLAUSULAS DE CONTRATO" />
+                                <p:selectManyCheckbox id="contratoA" value="#{checkboxView.selectedConsoles}" layout="grid" columns="2">
+                                    <f:selectItem itemLabel="Recuperacion de datos" itemValue="Xbox One" />
+                                    <f:selectItem itemLabel="Viabilidad a largo plazo" itemValue="PS4" />
+                                    <f:selectItem itemLabel="Acceso de usuarios privilegiados" itemValue="Wii U" />
+                                    <f:selectItem itemLabel="Ubicacion de Datos" itemValue="Wii U" />
+                                </p:selectManyCheckbox>
+                                <h:panelGroup></h:panelGroup>
+
+
+                            </h:panelGrid>
+                        </h:panelGrid>
+                    </h:form>
+                </h:panelGrid>
+
+                <!--<p:confirmDialog global="true" showEffect="fade" hideEffect="explode">  
+                    <p:commandButton value="Si" type="button" icon="ui-icon-check"/>  
+                    <p:commandButton value="No" type="button" icon="ui-icon-close"/>       
+                </p:confirmDialog> -->
+
+                <h:form id="frmEditarUsuario">
+                    <p:growl id="mensajeGeneral" showDetail="true" sticky="false"/>
+                    <p:dialog header="Datos del usuario" widgetVar="dialogEditarUsuario" modal="true">
+                        <h:panelGrid id="panelEditarUsuario" columns="3">
+                            <p:outputLabel value="Nombre: " for="txtNombre"/>
+                            <p:inputText id="txtNombre" label="Nombre" value="#{beanRUsuario.usuario.nombre}">
+                                <!--f:validator validatorId="validatorVacio"/-->
+                            </p:inputText>
+                            <p:message for="txtNombre"/>
+
+                            <p:outputLabel value="Apellido: " for="txtApellido"/>
+                            <p:inputText id="txtApellido" label="Apellido" value="#{beanRUsuario.usuario.apellido}">
+                                <!--f:validator validatorId="validatorVacio"/-->
+                            </p:inputText>
+                            <p:message for="txtApellido"/>
+
+                            <h:outputText value="Fecha de nacimiento:"/>
+                            <p:calendar id="txtFechaNacimiento" title="Ejemplo:dd/MM/yyyy" showOn="button" value="#{beanRUsuario.usuario.fechaNacimiento}" pattern="dd/MM/yyyy" required="true" requiredMessage="Se requiere Fecha"/>
+                            <p:message for="txtFechaNacimiento"/>
+
+                            <h:outputText value="Género:"/>          
+                            <p:selectOneRadio id="radioCuenta" value="#{beanRUsuario.usuario.genero}">
+                                <f:selectItem itemLabel="Masculino" itemValue="true"/>
+                                <f:selectItem itemLabel="Femenino" itemValue="false"/>
+                            </p:selectOneRadio>
+                            <h:panelGroup></h:panelGroup>
+
+                            <p:outputLabel value="Nombre de usuario: " for="txtUsername"/>
+                            <p:inputText id="txtUsername" label="Nombre de usuario" value="#{beanRUsuario.usuario.username}">
+                                <!--f:validator validatorId="validatorVacio"/-->
+                            </p:inputText>
+                            <p:message for="txtUsername"/>
+                        </h:panelGrid>
+                        <center>
+                            <p:commandButton value="Guardar cambios" ajax="false" actionListener="#{beanRUsuario.actualizar()}" styleClass="botonstyle"/>
+                        </center>
+                    </p:dialog>
+                </h:form>
+
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>
