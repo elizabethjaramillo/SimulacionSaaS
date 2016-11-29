@@ -1,0 +1,17 @@
+<form id="buscador" action="/search" style="display:inline;" method="get">
+<input id="caja_de_busqueda" name="q" placeholder="Introduce tu búsqueda..." />
+<input id="boton_de_buscar" value="Buscar" type="submit" /></form>
+
+
+<script type="application/ld+json">
+{
+   "@context": "http://schema.org",
+   "@type": "WebSite",
+   "url": "http://direccion_de_tu_web/",
+   "potentialAction": {
+     "@type": "SearchAction",
+     "target": "http://direccion_de_tu_web/search?q={search_term_string}",
+     "query-input": "required name=search_term_string"
+   }
+}
+</script>
