@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProbModelXML formatVersion="0.2.0">
+  <ProbNet type="BayesianNetwork">
+    <Comment><![CDATA[<<Double click to add/modify comment>>]]></Comment>
+    <Variables>
+      <Variable name="experiencia" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="537" y="102" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="anos02" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="816" y="41" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="anos3_5" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1098" y="61" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="anos6_10" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1071" y="140" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="mas10anos" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="830" y="177" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="ConfiabilidadProveedor" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="177" y="320" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="TipoContrato" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="542" y="229" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="ahesion" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1071" y="220" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="negociado" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1074" y="283" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="ClausulaContrato" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1526" y="232" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="PlanContinuidad" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1545" y="70" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="TerminacionModificacion" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1770" y="74" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="Confidencialida" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1995" y="76" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="Disponibilidad" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="2117" y="154" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="Rendimiento" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="2112" y="227" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="SuspencionS" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="2114" y="313" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="Seguridad" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1809" y="396" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="Privacidad" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1576" y="400" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="Pagos" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1369" y="338" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="ServicioSoporte" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="2040" y="388" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="acuerdoNivelServicio" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="582" y="416" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="recuperacionDatos" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="804" y="323" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="ViabilidadLargoPlazo" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1023" y="361" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="AccesoUsuarioPrivilegiado" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1245" y="433" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="UbicacionDatos" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1023" y="479" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="CuestinamientoAdicional" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="592" y="752" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="RequerimientoContraseña" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="747" y="542" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="RestrigirNIntento" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="877" y="583" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="PalabraClave" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1045" y="609" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="CifradoSSL" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1236" y="626" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="MAC" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1163" y="669" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="PreguntaSeguridad" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1122" y="701" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="ListaBlancaURL" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1105" y="736" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="OTP" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1083" y="774" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="SSP" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1069" y="821" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="EsquemaBD" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1036" y="905" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="TranferenciaDatos" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1046" y="992" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="STSI" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1535" y="700" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="ITSI" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1541" y="777" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="IDII" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1538" y="845" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="HTTP" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1553" y="927" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="HTTPS" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1713" y="966" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="TLS" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1501" y="1016" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+      <Variable name="SSH" type="finiteStates" role="chance" isInput="false">
+        <Coordinates x="1300" y="1032" />
+        <Unit />
+        <Precision>0.01</Precision>
+        <States>
+          <State name="no" />
+          <State name="yes" />
+        </States>
+      </Variable>
+    </Variables>
+    <Links>
+      <Link directed="true">
+        <Variable name="experiencia" />
+        <Variable name="ConfiabilidadProveedor" />
+      </Link>
+      <Link directed="true">
+        <Variable name="anos02" />
+        <Variable name="experiencia" />
+      </Link>
+      <Link directed="true">
+        <Variable name="anos3_5" />
+        <Variable name="experiencia" />
+      </Link>
+      <Link directed="true">
+        <Variable name="anos6_10" />
+        <Variable name="experiencia" />
+      </Link>
+      <Link directed="true">
+        <Variable name="mas10anos" />
+        <Variable name="experiencia" />
+      </Link>
+      <Link directed="true">
+        <Variable name="TipoContrato" />
+        <Variable name="ConfiabilidadProveedor" />
+      </Link>
+      <Link directed="true">
+        <Variable name="ahesion" />
+        <Variable name="TipoContrato" />
+      </Link>
+      <Link directed="true">
+        <Variable name="negociado" />
+        <Variable name="TipoContrato" />
+      </Link>
+      <Link directed="true">
+        <Variable name="ClausulaContrato" />
+        <Variable name="ConfiabilidadProveedor" />
+      </Link>
+      <Link directed="true">
+        <Variable name="PlanContinuidad" />
+        <Variable name="ClausulaContrato" />
+      </Link>
+      <Link directed="true">
+        <Variable name="TerminacionModificacion" />
+        <Variable name="ClausulaContrato" />
+      </Link>
+      <Link directed="true">
+        <Variable name="Confidencialida" />
+        <Variable name="ClausulaContrato" />
+      </Link>
+      <Link directed="true">
+        <Variable name="Disponibilidad" />
+        <Variable name="ClausulaContrato" />
+      </Link>
+      <Link directed="true">
+        <Variable name="Rendimiento" />
+        <Variable name="ClausulaContrato" />
+      </Link>
+      <Link directed="true">
+        <Variable name="SuspencionS" />
+        <Variable name="ClausulaContrato" />
+      </Link>
+      <Link directed="true">
+        <Variable name="Seguridad" />
+        <Variable name="ClausulaContrato" />
+      </Link>
+      <Link directed="true">
+        <Variable name="Privacidad" />
+        <Variable name="ClausulaContrato" />
+      </Link>
+      <Link directed="true">
+        <Variable name="Pagos" />
+        <Variable name="ClausulaContrato" />
+      </Link>
+      <Link directed="true">
+        <Variable name="ServicioSoporte" />
+        <Variable name="ClausulaContrato" />
+      </Link>
+      <Link directed="true">
+        <Variable name="acuerdoNivelServicio" />
+        <Variable name="ConfiabilidadProveedor" />
+      </Link>
+      <Link directed="true">
+        <Variable name="recuperacionDatos" />
+        <Variable name="acuerdoNivelServicio" />
+      </Link>
+      <Link directed="true">
+        <Variable name="ViabilidadLargoPlazo" />
+        <Variable name="acuerdoNivelServicio" />
+      </Link>
+      <Link directed="true">
+        <Variable name="AccesoUsuarioPrivilegiado" />
+        <Variable name="acuerdoNivelServicio" />
+      </Link>
+      <Link directed="true">
+        <Variable name="UbicacionDatos" />
+        <Variable name="acuerdoNivelServicio" />
+      </Link>
+      <Link directed="true">
+        <Variable name="CuestinamientoAdicional" />
+        <Variable name="ConfiabilidadProveedor" />
+      </Link>
+      <Link directed="true">
+        <Variable name="RequerimientoContraseña" />
+        <Variable name="CuestinamientoAdicional" />
+      </Link>
+      <Link directed="true">
+        <Variable name="RestrigirNIntento" />
+        <Variable name="CuestinamientoAdicional" />
+      </Link>
+      <Link directed="true">
+        <Variable name="PalabraClave" />
+        <Variable name="CuestinamientoAdicional" />
+      </Link>
+      <Link directed="true">
+        <Variable name="CifradoSSL" />
+        <Variable name="CuestinamientoAdicional" />
+      </Link>
+      <Link directed="true">
+        <Variable name="MAC" />
+        <Variable name="CuestinamientoAdicional" />
+      </Link>
+      <Link directed="true">
+        <Variable name="PreguntaSeguridad" />
+        <Variable name="CuestinamientoAdicional" />
+      </Link>
+      <Link directed="true">
+        <Variable name="ListaBlancaURL" />
+        <Variable name="CuestinamientoAdicional" />
+      </Link>
+      <Link directed="true">
+        <Variable name="OTP" />
+        <Variable name="CuestinamientoAdicional" />
+      </Link>
+      <Link directed="true">
+        <Variable name="SSP" />
+        <Variable name="CuestinamientoAdicional" />
+      </Link>
+      <Link directed="true">
+        <Variable name="EsquemaBD" />
+        <Variable name="CuestinamientoAdicional" />
+      </Link>
+      <Link directed="true">
+        <Variable name="TranferenciaDatos" />
+        <Variable name="CuestinamientoAdicional" />
+      </Link>
+      <Link directed="true">
+        <Variable name="STSI" />
+        <Variable name="EsquemaBD" />
+      </Link>
+      <Link directed="true">
+        <Variable name="ITSI" />
+        <Variable name="EsquemaBD" />
+      </Link>
+      <Link directed="true">
+        <Variable name="IDII" />
+        <Variable name="EsquemaBD" />
+      </Link>
+      <Link directed="true">
+        <Variable name="HTTP" />
+        <Variable name="TranferenciaDatos" />
+      </Link>
+      <Link directed="true">
+        <Variable name="HTTPS" />
+        <Variable name="TranferenciaDatos" />
+      </Link>
+      <Link directed="true">
+        <Variable name="TLS" />
+        <Variable name="TranferenciaDatos" />
+      </Link>
+      <Link directed="true">
+        <Variable name="SSH" />
+        <Variable name="TranferenciaDatos" />
+      </Link>
+    </Links>
+    <Potentials>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="experiencia" />
+          <Variable name="anos02" />
+          <Variable name="anos3_5" />
+          <Variable name="anos6_10" />
+          <Variable name="mas10anos" />
+        </Variables>
+        <Values>1.0 0.0 0.6 0.4 0.35 0.65 1.0 0.0 0.15 0.85 1.0 0.0 1.0 0.0 1.0 0.0 0.0 1.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0</Values>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="anos02" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="anos3_5" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="anos6_10" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="mas10anos" />
+        </Variables>
+      </Potential>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="ConfiabilidadProveedor" />
+          <Variable name="TipoContrato" />
+          <Variable name="experiencia" />
+          <Variable name="ClausulaContrato" />
+          <Variable name="acuerdoNivelServicio" />
+          <Variable name="CuestinamientoAdicional" />
+        </Variables>
+        <Values>1.0 0.0 0.95 0.05 0.95 0.05 0.9 0.1 0.7 0.3 0.65 0.35 0.65 0.35 0.6 0.4 0.7 0.3 0.65 0.35 0.65 0.35 0.6 0.4 0.4 0.6 0.35 0.65 0.35 0.65 0.3 0.7 0.7 0.3 0.65 0.35 0.65 0.35 0.6 0.4 0.4 0.6 0.35 0.65 0.35 0.65 0.3 0.7 0.4 0.6 0.35 0.65 0.35 0.65 0.3 0.7 0.1 0.9 0.05 0.95 0.05 0.95 0.0 1.0</Values>
+      </Potential>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="TipoContrato" />
+          <Variable name="ahesion" />
+          <Variable name="negociado" />
+        </Variables>
+        <Values>1.0 0.0 0.3 0.7 0.0 1.0 1.0 0.0</Values>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="ahesion" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="negociado" />
+        </Variables>
+      </Potential>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="ClausulaContrato" />
+          <Variable name="PlanContinuidad" />
+          <Variable name="TerminacionModificacion" />
+          <Variable name="Confidencialida" />
+          <Variable name="Disponibilidad" />
+          <Variable name="Rendimiento" />
+          <Variable name="SuspencionS" />
+          <Variable name="Seguridad" />
+          <Variable name="Privacidad" />
+          <Variable name="Pagos" />
+          <Variable name="ServicioSoporte" />
+        </Variables>
+        <Values>1.0 0.0 0.9 0.1 0.9 0.1 0.8 0.2 0.9 0.1 0.8 0.2 0.8 0.2 0.7 0.3 0.9 0.1 0.8 0.2 0.8 0.2 0.7 0.3 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.9 0.1 0.8 0.2 0.8 0.2 0.7 0.3 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.9 0.1 0.8 0.2 0.8 0.2 0.7 0.3 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.9 0.1 0.8 0.2 0.8 0.2 0.7 0.3 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.7 0.3 0.7 0.3 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.9 0.1 0.8 0.2 0.8 0.2 0.7 0.3 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.9 0.1 0.8 0.2 0.8 0.2 0.7 0.3 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.7 0.3 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.6 0.4 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.3 0.7 0.2 0.8 0.2 0.8 0.1 0.9 0.9 0.1 0.8 0.2 0.8 0.2 0.7 0.3 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.6 0.4 0.5 0.5 0.4 0.6 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.35 0.65 0.4 0.6 0.3 0.7 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.3 0.7 0.2 0.8 0.2 0.8 0.1 0.9 0.8 0.2 0.7 0.3 0.7 0.3 0.6 0.4 0.6 0.4 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.3 0.7 0.2 0.8 0.2 0.8 0.1 0.9 0.7 0.3 0.6 0.4 0.6 0.4 0.5 0.5 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.3 0.7 0.2 0.8 0.2 0.8 0.1 0.9 0.6 0.4 0.5 0.5 0.5 0.5 0.4 0.6 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.3 0.7 0.2 0.8 0.2 0.8 0.1 0.9 0.5 0.5 0.4 0.6 0.4 0.6 0.3 0.7 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.3 0.7 0.2 0.8 0.2 0.8 0.1 0.9 0.4 0.6 0.3 0.7 0.3 0.7 0.2 0.8 0.3 0.7 0.2 0.8 0.2 0.8 0.1 0.9 0.3 0.7 0.2 0.8 0.2 0.8 0.1 0.9 0.2 0.8 0.1 0.9 0.1 0.9 0.0 1.0</Values>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="PlanContinuidad" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="TerminacionModificacion" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="Confidencialida" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="Disponibilidad" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="Rendimiento" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="SuspencionS" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="Seguridad" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="Privacidad" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="Pagos" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="ServicioSoporte" />
+        </Variables>
+      </Potential>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="acuerdoNivelServicio" />
+          <Variable name="recuperacionDatos" />
+          <Variable name="ViabilidadLargoPlazo" />
+          <Variable name="AccesoUsuarioPrivilegiado" />
+          <Variable name="UbicacionDatos" />
+        </Variables>
+        <Values>1.0 0.0 0.75 0.25 0.75 0.25 0.5 0.5 0.75 0.25 0.5 0.5 0.5 0.5 0.25 0.75 0.75 0.25 0.5 0.5 0.5 0.5 0.25 0.75 0.5 0.5 0.25 0.75 0.25 0.75 0.0 1.0</Values>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="recuperacionDatos" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="ViabilidadLargoPlazo" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="AccesoUsuarioPrivilegiado" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="UbicacionDatos" />
+        </Variables>
+      </Potential>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="CuestinamientoAdicional" />
+          <Variable name="RestrigirNIntento" />
+          <Variable name="RequerimientoContraseña" />
+          <Variable name="PalabraClave" />
+          <Variable name="CifradoSSL" />
+          <Variable name="MAC" />
+          <Variable name="PreguntaSeguridad" />
+          <Variable name="ListaBlancaURL" />
+          <Variable name="OTP" />
+          <Variable name="SSP" />
+          <Variable name="EsquemaBD" />
+          <Variable name="TranferenciaDatos" />
+        </Variables>
+        <Values>1.0 0.0 0.91 0.09 0.91 0.09 0.82 0.18 0.91 0.09 0.82 0.18 0.82 0.18 0.73 0.27 0.91 0.09 0.82 0.18 0.82 0.18 0.73 0.27 0.82 0.18 0.73 0.27 0.73 0.27 0.64 0.36 0.91 0.09 0.82 0.18 0.82 0.18 0.73 0.27 0.82 0.18 0.73 0.27 0.73 0.27 0.64 0.36 0.82 0.18 0.73 0.27 0.73 0.27 0.64 0.36 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.91 0.09 0.82 0.18 0.82 0.18 0.73 0.27 0.82 0.18 0.73 0.27 0.73 0.27 0.64 0.36 0.82 0.18 0.73 0.27 0.73 0.27 0.64 0.36 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.82 0.18 0.73 0.27 0.73 0.27 0.64 0.36 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.91 0.09 0.82 0.18 0.82 0.18 0.73 0.27 0.82 0.18 0.73 0.27 0.73 0.27 0.64 0.36 0.82 0.18 0.73 0.27 0.73 0.27 0.73 0.27 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.82 0.18 0.73 0.27 0.73 0.27 0.64 0.36 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.82 0.18 0.73 0.27 0.73 0.27 0.64 0.36 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.91 0.09 0.82 0.18 0.82 0.18 0.73 0.27 0.82 0.18 0.73 0.27 0.73 0.27 0.64 0.36 0.82 0.18 0.73 0.27 0.73 0.27 0.64 0.36 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.82 0.18 0.73 0.27 0.73 0.27 0.64 0.36 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.82 0.18 0.73 0.27 0.73 0.27 0.64 0.36 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.82 0.18 0.73 0.27 0.73 0.27 0.64 0.36 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.1 0.9 0.82 0.18 0.82 0.18 0.73 0.27 0.82 0.18 0.73 0.27 0.73 0.27 0.64 0.36 0.82 0.18 0.73 0.27 0.73 0.27 0.64 0.36 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.82 0.18 0.73 0.27 0.73 0.27 0.64 0.36 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.82 0.18 0.73 0.27 0.73 0.27 0.64 0.36 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.55 0.45 0.46 0.54 0.37 0.63 0.82 0.18 0.73 0.27 0.73 0.27 0.64 0.36 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.73 0.27 0.62 0.38 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.64 0.36 0.55 0.45 0.55 0.45 0.55 0.45 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.82 0.18 0.73 0.27 0.73 0.27 0.64 0.36 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.64 0.36 0.55 0.45 0.55 0.45 0.45 0.55 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.37 0.63 0.28 0.72 0.28 0.72 0.19 0.81 0.91 0.09 0.82 0.18 0.82 0.18 0.73 0.27 0.82 0.18 0.73 0.27 0.73 0.27 0.64 0.36 0.82 0.18 0.73 0.27 0.73 0.27 0.64 0.36 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.82 0.18 0.73 0.27 0.73 0.27 0.64 0.36 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.82 0.18 0.73 0.27 0.73 0.27 0.64 0.36 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.82 0.18 0.73 0.27 0.73 0.27 0.64 0.36 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.82 0.18 0.73 0.27 0.73 0.27 0.64 0.36 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.37 0.63 0.28 0.72 0.28 0.72 0.19 0.81 0.82 0.18 0.73 0.27 0.73 0.27 0.64 0.36 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.55 0.45 0.46 0.54 0.37 0.63 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.37 0.63 0.28 0.72 0.28 0.72 0.19 0.81 0.73 0.27 0.64 0.36 0.64 0.36 0.55 0.45 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.37 0.63 0.28 0.72 0.28 0.72 0.19 0.81 0.64 0.36 0.55 0.45 0.55 0.45 0.46 0.54 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.37 0.63 0.28 0.72 0.28 0.72 0.19 0.81 0.55 0.45 0.46 0.54 0.46 0.54 0.37 0.63 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.37 0.63 0.28 0.72 0.28 0.72 0.19 0.81 0.46 0.54 0.37 0.63 0.37 0.63 0.28 0.72 0.37 0.63 0.28 0.72 0.28 0.72 0.19 0.81 0.37 0.63 0.28 0.72 0.28 0.72 0.19 0.81 0.28 0.72 0.19 0.81 0.19 0.81 0.1 0.9 0.9 0.1 0.81 0.19 0.81 0.19 0.72 0.28 0.81 0.19 0.72 0.28 0.72 0.28 0.5 0.5 0.81 0.19 0.72 0.28 0.72 0.28 0.63 0.37 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.81 0.19 0.72 0.28 0.72 0.28 0.63 0.37 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.81 0.19 0.72 0.28 0.72 0.28 0.63 0.37 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.63 0.37 0.63 0.37 0.63 0.37 0.54 0.46 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.81 0.19 0.72 0.28 0.72 0.28 0.63 0.37 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.81 0.19 0.72 0.28 0.72 0.28 0.63 0.37 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.37 0.63 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.45 0.55 0.45 0.55 0.45 0.55 0.27 0.73 0.45 0.55 0.27 0.73 0.27 0.73 0.18 0.82 0.81 0.19 0.72 0.28 0.72 0.28 0.63 0.37 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.53 0.47 0.54 0.46 0.54 0.46 0.45 0.55 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.36 0.64 0.27 0.73 0.27 0.73 0.18 0.82 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.64 0.36 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.36 0.64 0.27 0.73 0.27 0.73 0.18 0.82 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.37 0.63 0.54 0.46 0.45 0.55 0.45 0.55 0.37 0.63 0.45 0.55 0.37 0.63 0.37 0.63 0.27 0.73 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.36 0.64 0.27 0.73 0.27 0.73 0.18 0.82 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.36 0.64 0.27 0.73 0.27 0.73 0.18 0.82 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.36 0.64 0.27 0.73 0.27 0.73 0.18 0.82 0.36 0.64 0.27 0.73 0.27 0.73 0.18 0.82 0.27 0.73 0.18 0.82 0.18 0.82 0.09 0.91 0.81 0.19 0.72 0.28 0.72 0.28 0.63 0.37 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.36 0.64 0.27 0.73 0.27 0.73 0.18 0.82 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.37 0.63 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.36 0.64 0.27 0.73 0.27 0.73 0.18 0.82 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.36 0.64 0.27 0.73 0.27 0.73 0.18 0.82 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.36 0.64 0.27 0.73 0.27 0.73 0.18 0.82 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.36 0.64 0.27 0.73 0.27 0.73 0.18 0.82 0.36 0.64 0.27 0.73 0.27 0.73 0.18 0.82 0.27 0.73 0.18 0.82 0.18 0.82 0.09 0.91 0.72 0.28 0.63 0.37 0.63 0.37 0.54 0.46 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.36 0.64 0.27 0.73 0.27 0.73 0.18 0.82 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.36 0.64 0.27 0.73 0.27 0.73 0.18 0.82 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.36 0.64 0.27 0.73 0.27 0.73 0.18 0.82 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.36 0.64 0.27 0.73 0.27 0.73 0.18 0.82 0.36 0.64 0.27 0.73 0.27 0.73 0.18 0.82 0.27 0.73 0.18 0.82 0.18 0.82 0.09 0.91 0.63 0.37 0.54 0.46 0.54 0.46 0.45 0.55 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.36 0.64 0.27 0.73 0.27 0.73 0.18 0.82 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.36 0.64 0.27 0.73 0.27 0.73 0.18 0.82 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.36 0.64 0.27 0.73 0.27 0.73 0.18 0.82 0.36 0.64 0.27 0.73 0.27 0.73 0.18 0.82 0.27 0.73 0.18 0.82 0.18 0.82 0.09 0.91 0.54 0.46 0.45 0.55 0.45 0.55 0.36 0.64 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.36 0.64 0.27 0.73 0.27 0.73 0.18 0.82 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.36 0.64 0.27 0.73 0.27 0.73 0.18 0.82 0.36 0.64 0.27 0.73 0.27 0.73 0.18 0.82 0.27 0.73 0.18 0.82 0.18 0.82 0.09 0.91 0.45 0.55 0.36 0.64 0.36 0.64 0.27 0.73 0.36 0.64 0.27 0.73 0.27 0.73 0.18 0.82 0.36 0.64 0.27 0.73 0.27 0.73 0.18 0.82 0.27 0.73 0.18 0.82 0.18 0.82 0.09 0.91 0.36 0.64 0.27 0.73 0.27 0.73 0.18 0.82 0.27 0.73 0.18 0.82 0.18 0.82 0.09 0.91 0.27 0.73 0.18 0.82 0.18 0.82 0.09 0.91 0.18 0.82 0.09 0.91 0.09 0.91 0.0 1.0</Values>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="RequerimientoContraseña" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="RestrigirNIntento" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="PalabraClave" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="CifradoSSL" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="MAC" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="PreguntaSeguridad" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="ListaBlancaURL" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="OTP" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="SSP" />
+        </Variables>
+      </Potential>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="EsquemaBD" />
+          <Variable name="STSI" />
+          <Variable name="ITSI" />
+          <Variable name="IDII" />
+        </Variables>
+        <Values>1.0 0.0 0.7 0.3 0.5 0.5 1.0 0.0 0.0 1.0 1.0 0.0 1.0 0.0 1.0 0.0</Values>
+      </Potential>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="TranferenciaDatos" />
+          <Variable name="HTTP" />
+          <Variable name="HTTPS" />
+          <Variable name="TLS" />
+          <Variable name="SSH" />
+        </Variables>
+        <Values>1.0 0.0 0.9 0.1 0.1 0.9 1.0 0.0 0.0 1.0 1.0 0.0 1.0 0.0 1.0 0.0 0.0 1.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0 1.0 0.0</Values>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="STSI" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="ITSI" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="IDII" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="HTTP" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="HTTPS" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="TLS" />
+        </Variables>
+      </Potential>
+      <Potential type="Uniform" role="conditionalProbability">
+        <Variables>
+          <Variable name="SSH" />
+        </Variables>
+      </Potential>
+    </Potentials>
+    <AdditionalProperties />
+  </ProbNet>
+  <Evidence>
+    <EvidenceCase />
+    <EvidenceCase>
+      <EvidenceCase variable="PreguntaSeguridad" state="yes" />
+      <EvidenceCase variable="HTTPS" state="no" />
+      <EvidenceCase variable="Rendimiento" state="yes" />
+      <EvidenceCase variable="TLS" state="no" />
+      <EvidenceCase variable="Disponibilidad" state="yes" />
+      <EvidenceCase variable="IDII" state="yes" />
+      <EvidenceCase variable="HTTP" state="no" />
+      <EvidenceCase variable="UbicacionDatos" state="no" />
+      <EvidenceCase variable="recuperacionDatos" state="yes" />
+      <EvidenceCase variable="RestrigirNIntento" state="yes" />
+      <EvidenceCase variable="Confidencialida" state="yes" />
+      <EvidenceCase variable="anos02" state="no" />
+      <EvidenceCase variable="STSI" state="no" />
+      <EvidenceCase variable="OTP" state="yes" />
+      <EvidenceCase variable="negociado" state="yes" />
+      <EvidenceCase variable="TerminacionModificacion" state="yes" />
+      <EvidenceCase variable="ahesion" state="no" />
+      <EvidenceCase variable="CifradoSSL" state="yes" />
+      <EvidenceCase variable="ViabilidadLargoPlazo" state="yes" />
+      <EvidenceCase variable="Seguridad" state="yes" />
+      <EvidenceCase variable="SSH" state="yes" />
+      <EvidenceCase variable="mas10anos" state="no" />
+      <EvidenceCase variable="ListaBlancaURL" state="yes" />
+      <EvidenceCase variable="ITSI" state="no" />
+      <EvidenceCase variable="SSP" state="yes" />
+      <EvidenceCase variable="PlanContinuidad" state="yes" />
+      <EvidenceCase variable="AccesoUsuarioPrivilegiado" state="yes" />
+      <EvidenceCase variable="RequerimientoContraseña" state="yes" />
+      <EvidenceCase variable="PalabraClave" state="yes" />
+      <EvidenceCase variable="MAC" state="yes" />
+      <EvidenceCase variable="anos3_5" state="yes" />
+      <EvidenceCase variable="SuspencionS" state="yes" />
+      <EvidenceCase variable="ServicioSoporte" state="yes" />
+      <EvidenceCase variable="Privacidad" state="yes" />
+      <EvidenceCase variable="Pagos" state="yes" />
+      <EvidenceCase variable="anos6_10" state="no" />
+    </EvidenceCase>
+  </Evidence>
+</ProbModelXML>
