@@ -84,15 +84,17 @@
                                         <f:selectItem itemLabel="OTL" itemValue="OTP" />
                                         <f:selectItem itemLabel="SSO" itemValue="SSP" />                                        
                                     </p:selectManyCheckbox>
-                                    <h:panelGroup></h:panelGroup>
-                                    <p:outputLabel value="Seleccionar Tipo de Exquema DB:"/>  
+                                    </p:panel>
+                                    <p:panel header="Seleccionar Tipo de Exquema DB">
+                                    <h:panelGroup></h:panelGroup>                                      
                                     <p:selectOneRadio id="exquemabd" value="#{userWizard.tipoEsquema}">
                                         <f:selectItem itemLabel="STSI" itemValue="STSI" />
                                         <f:selectItem itemLabel="ITSI" itemValue="ITSI" />
                                         <f:selectItem itemLabel="IDII" itemValue="IDII" />
                                     </p:selectOneRadio>
                                     <h:panelGroup></h:panelGroup>
-                                    <p:outputLabel value=" Seleccionar Protocolo de Tranferencia:"/>  
+                                    </p:panel>
+                                    <p:panel header="Seleccionar Protocolo de Tranferencia:">                                    
                                     <p:selectOneRadio  id="protocolo" value="#{userWizard.protocolotransferencia}">
                                         <f:selectItem itemLabel="HTTP" itemValue="HTTP" />
                                         <f:selectItem itemLabel="HTTPS" itemValue="HTTPS" />
