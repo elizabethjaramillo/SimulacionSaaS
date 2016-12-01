@@ -11,7 +11,7 @@
         <ui:composition template="template/template.xhtml">
 
             <ui:define name="content">
-                <center><h2>VERIFICAR CONFIABILIDAD </h2></center><hr/>
+                <center><h2>VERIFICAR CONFIABILIDAD </h2>
                 <h:panelGrid id="panelAdministracionUsuario" columns="1" cellspacing="25px">
 
 
@@ -32,17 +32,17 @@
                                 <p:panel header="Contrato Detalles">                                    
                                     <p:outputLabel value="Seleccione la experiencia del proveedor:"/>          
                                     <h:panelGrid columns="2" columnClasses="label, value">                            
-                                        <p:selectOneRadio >
-                                            <f:selectItem itemLabel="0-2 años" itemValue="0.2" />
-                                            <f:selectItem itemLabel="3-5 años" itemValue="0.4" />
-                                            <f:selectItem itemLabel="5-10 años" itemValue="0.5" />
-                                            <f:selectItem itemLabel="más de 10 años" itemValue="1" />
+                                        <p:selectOneRadio value="#{userWizard.experiencia}">
+                                            <f:selectItem itemLabel="0-2 años" itemValue="anos02" />
+                                            <f:selectItem itemLabel="3-5 años" itemValue="anos3_5" />
+                                            <f:selectItem itemLabel="5-10 años" itemValue="anos6_10" />
+                                            <f:selectItem itemLabel="más de 10 años" itemValue="mas10anos" />
                                         </p:selectOneRadio>                                                                    
                                     </h:panelGrid>
                                     <p:outputLabel value="Tipo de Contrato:"/>          
                                     <p:selectOneRadio  value="#{userWizard.tipocontrato}">
-                                        <f:selectItem itemLabel="Adhesion" itemValue="1"/> 
-                                        <f:selectItem itemLabel="Negociada" itemValue="2"/>
+                                        <f:selectItem itemLabel="Adhesion" itemValue="ahesion"/> 
+                                        <f:selectItem itemLabel="Negociada" itemValue="negociado"/>
                                     </p:selectOneRadio>
                                 </p:panel>
                             </p:tab>
@@ -50,72 +50,63 @@
                                 <p:panel header="CLAUSULAS DE CONTRATO">                                    
 
                                     <p:selectManyCheckbox id="clusua" value="#{userWizard.selectedClausulas}" layout="grid" columns="2">
-                                        <f:selectItem itemLabel="Plan continuidad" itemValue="Xbox One" />
-                                        <f:selectItem itemLabel="Terminacion de Modificacion" itemValue="PS4" />
-                                        <f:selectItem itemLabel="Confidencialidad" itemValue="Wii U" />
-                                        <f:selectItem itemLabel="Disponibilidad" itemValue="Wii U" />
-                                        <f:selectItem itemLabel="Rendimiento" itemValue="Xbox One" />
-                                        <f:selectItem itemLabel="Suspencion de Servicio" itemValue="PS4" />
-                                        <f:selectItem itemLabel="Servicio de Soporte" itemValue="Wii U" />
-                                        <f:selectItem itemLabel="Seguridad" itemValue="Wii U" />
-                                        <f:selectItem itemLabel="Privacidad de Cumplimiento" itemValue="PS4" />
-                                        <f:selectItem itemLabel="Pagos" itemValue="PS4" />
+                                        <f:selectItem itemLabel="Plan continuidad" itemValue="PlanContinuidad" />
+                                        <f:selectItem itemLabel="Terminacion de Modificacion" itemValue="TerminacionModificacion" />
+                                        <f:selectItem itemLabel="Confidencialidad" itemValue="Confidencialida" />
+                                        <f:selectItem itemLabel="Disponibilidad" itemValue="Disponibilidad" />
+                                        <f:selectItem itemLabel="Rendimiento" itemValue="Rendimiento" />
+                                        <f:selectItem itemLabel="Suspencion de Servicio" itemValue="SuspencionS" />
+                                        <f:selectItem itemLabel="Servicio de Soporte" itemValue="ServicioSoporte" />
+                                        <f:selectItem itemLabel="Seguridad" itemValue="Seguridad" />
+                                        <f:selectItem itemLabel="Privacidad de Cumplimiento" itemValue="Privacidad" />
+                                        <f:selectItem itemLabel="Pagos" itemValue="Pagos" />
                                     </p:selectManyCheckbox>
                                 </p:panel>
                                 <p:panel header="ACUERDO NIVEL SERVICIO">                                  
                                     <p:selectManyCheckbox id="contratoA" value="#{userWizard.selectedAcuerdos}" layout="grid" columns="2">
-                                        <f:selectItem itemLabel="Recuperacion de datos" itemValue="Xbox One" />
-                                        <f:selectItem itemLabel="Viabilidad a largo plazo" itemValue="PS4" />
-                                        <f:selectItem itemLabel="Acceso de usuarios privilegiados" itemValue="Wii U" />
-                                        <f:selectItem itemLabel="Ubicacion de Datos" itemValue="Wii U" />
+                                        <f:selectItem itemLabel="Recuperacion de datos" itemValue="recuperacionDatos" />
+                                        <f:selectItem itemLabel="Viabilidad a largo plazo" itemValue="ViabilidadLargoPlazo" />
+                                        <f:selectItem itemLabel="Acceso de usuarios privilegiados" itemValue="AccesoUsuarioPrivilegiado" />
+                                        <f:selectItem itemLabel="Ubicacion de Datos" itemValue="UbicacionDatos" />
                                     </p:selectManyCheckbox>
                                 </p:panel>
                             </p:tab>
                             <p:tab id="adicionales" title="Cuestionamientos Adicionales">
                                 <p:panel header="Medidas de seguridad exigibles">                                    
-                                    <p:selectManyCheckbox id="medidadS" value="#{checkboxView.selectedConsoles}" layout="grid" columns="2">
-                                        <f:selectItem itemLabel="Requerimiento de contraseña" itemValue="Xbox One" />
-                                        <f:selectItem itemLabel="Restrigir numero e intentos" itemValue="PS4" />
-                                        <f:selectItem itemLabel="Certificado SSL" itemValue="Wii U" />
-                                        <f:selectItem itemLabel="Datos Cifrados" itemValue="Wii U" />
-                                        <f:selectItem itemLabel="Cifrado SSL" itemValue="Xbox One" />
-                                        <f:selectItem itemLabel="MAC" itemValue="PS4" />
-                                        <f:selectItem itemLabel="Pregunta de Seguridad" itemValue="Wii U" />
-                                        <f:selectItem itemLabel="Lista Blanca de URL" itemValue="Wii U" />
-                                        <f:selectItem itemLabel="OTL" itemValue="PS4" />
-                                        <f:selectItem itemLabel="SSO" itemValue="PS4" />
-                                        <f:selectItem itemLabel="Exquema DB" itemValue="PS4" />
-                                        <f:selectItem itemLabel="Protocolo de Tranferencia" itemValue="PS4" />
+                                    <p:selectManyCheckbox id="medidadS" value="#{userWizard.clausulasAdicionales}" layout="grid" columns="2">
+                                        <f:selectItem itemLabel="Requerimiento de contraseña" itemValue="RequerimientoContraseña" />
+                                        <f:selectItem itemLabel="Restrigir numero e intentos" itemValue="RestrigirNIntento" />
+                                        <f:selectItem itemLabel="Certificado SSL" itemValue="PalabraClave" />
+                                        <f:selectItem itemLabel="Datos Cifrados" itemValue="CifradoSSL" />                                        
+                                        <f:selectItem itemLabel="MAC" itemValue="MAC" />
+                                        <f:selectItem itemLabel="Pregunta de Seguridad" itemValue="PreguntaSeguridad" />
+                                        <f:selectItem itemLabel="Lista Blanca de URL" itemValue="ListaBlancaURL" />
+                                        <f:selectItem itemLabel="OTL" itemValue="OTP" />
+                                        <f:selectItem itemLabel="SSO" itemValue="SSP" />                                        
                                     </p:selectManyCheckbox>
                                     <h:panelGroup></h:panelGroup>
                                     <p:outputLabel value="Seleccionar Tipo de Exquema DB:"/>  
-                                    <p:selectManyCheckbox id="exquemabd" value="#{checkboxView.selectedConsoles}" layout="grid" columns="4">
-                                        <f:selectItem itemLabel="STSI" itemValue="Xbox One" />
-                                        <f:selectItem itemLabel="ITSI" itemValue="PS4" />
-                                        <f:selectItem itemLabel="IDII" itemValue="Wii U" />
-                                    </p:selectManyCheckbox>
+                                    <p:selectOneRadio id="exquemabd" value="#{userWizard.tipoEsquema}">
+                                        <f:selectItem itemLabel="STSI" itemValue="STSI" />
+                                        <f:selectItem itemLabel="ITSI" itemValue="ITSI" />
+                                        <f:selectItem itemLabel="IDII" itemValue="IDII" />
+                                    </p:selectOneRadio>
                                     <h:panelGroup></h:panelGroup>
                                     <p:outputLabel value=" Seleccionar Protocolo de Tranferencia:"/>  
-
-                                    <p:selectManyCheckbox id="protocolo" value="#{checkboxView.selectedConsoles}" layout="grid" columns="4">
-                                        <f:selectItem itemLabel="HTTP" itemValue="Xbox One" />
-                                        <f:selectItem itemLabel="HTTPS" itemValue="PS4" />
-                                        <f:selectItem itemLabel="TLS" itemValue="Wii U" />
-                                        <f:selectItem itemLabel="SSH" itemValue="Wii U" />
-                                    </p:selectManyCheckbox>
-                                    <h:panelGroup></h:panelGroup>
-                                    <h:panelGroup></h:panelGroup>
-                                    <p:outputLabel value="Tipo de nube SaaS:"/>          
-                                    <p:selectOneRadio  value="#{beanRUsuario.usuario.genero}">
-                                        <f:selectItem itemLabel="Pública" itemValue="1"/> 
-                                        <f:selectItem itemLabel="Privada" itemValue="2"/>
-                                        <f:selectItem itemLabel="Hibrida" itemValue="3"/>
+                                    <p:selectOneRadio  id="protocolo" value="#{userWizard.protocolotransferencia}">
+                                        <f:selectItem itemLabel="HTTP" itemValue="HTTP" />
+                                        <f:selectItem itemLabel="HTTPS" itemValue="HTTPS" />
+                                        <f:selectItem itemLabel="TLS" itemValue="TLS" />
+                                        <f:selectItem itemLabel="SSH" itemValue="SSH" />
                                     </p:selectOneRadio>
+                                    <h:panelGroup></h:panelGroup>
+                                    <p:commandButton value="Calcular" actionListener="#{userWizard.calcularProbabilidad()}" />
                                 </p:panel>
                             </p:tab>
                         </p:wizard>                     
                     </h:form>
                 </h:panelGrid>
+                    </center><hr/>
             </ui:define>
         </ui:composition>
     </body>

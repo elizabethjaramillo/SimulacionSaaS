@@ -45,7 +45,7 @@ public class LeerRed implements Serializable {
     public String LeerArchivo(List<Parametro> listaParametro) throws FileNotFoundException, ParserException, NonProjectablePotentialException, WrongCriterionException, ProbNodeNotFoundException, NotEvaluableNetworkException, IncompatibleEvidenceException, UnexpectedInferenceException, InvalidStateException {
         String parametro1 = listaParametro.get(0).getNombre();
         //InputStream file = new FileInputStream(new File(System.getProperty("user.dir") + "/src/java/archivo/" + nombrered));
-        InputStream file = new FileInputStream(new File("C:\\xampp\\htdocs\\redesbayesianassaas\\src\\java\\RedBayesiana\\" + bayesNetworkName));
+        InputStream file = new FileInputStream(new File("C:\\Users\\yef\\Documents\\NetBeansProjects\\redesbayesianassaas\\src\\java\\RedBayesiana\\" + bayesNetworkName));
         PGMXReader reader = new PGMXReader();
         ProbNet prob = reader.loadProbNet(file, parametro1).getProbNet();
 //        ProbNet prob1 = reader.loadProbNet(file, "ahesion").getProbNet();
@@ -81,15 +81,16 @@ public class LeerRed implements Serializable {
             HashMap<Variable, TablePotential> posteriorProbabilities) {
         String resultados = "";
         for (Finding finding : evidence.getFindings()) {
-            resultados += "1:  " + finding.getVariable() + ": ";
+            //resultados += "1:  " + finding.getVariable() + ": ";
+           
             s.add(String.valueOf(finding.getVariable()));
-            s.add(finding.getState());
-            resultados += finding.getState();
+            s.add(finding.getState());            
+            //resultados += finding.getState();
         }
         for (Variable variable : variablesOfInterest) {
             double value;
             TablePotential posteriorProbabilitiesPotential = posteriorProbabilities.get(variable);
-            resultados += " 2:  " + variable + ": ";
+            //resultados += " 2:  " + variable + ": ";
             int stateIndex = -1;
             try {
                 stateIndex = variable.getStateIndex("yes");
@@ -109,13 +110,13 @@ public class LeerRed implements Serializable {
     public static void main(String[] args) {
         List<Parametro> listaParametro = new ArrayList<>();
         //Experiencia (solo elegir uno)
-        listaParametro.add(new Parametro("anos02", "yes"));
+        listaParametro.add(new Parametro("anos02", "no"));
         listaParametro.add(new Parametro("anos3_5", "no"));
         listaParametro.add(new Parametro("anos6_10", "no"));
-        listaParametro.add(new Parametro("mas10anos", "no"));
+        listaParametro.add(new Parametro("mas10anos", "yes"));
         //tipo de contrato (solo elegir uno)
-        listaParametro.add(new Parametro("ahesion", "yes"));
-        listaParametro.add(new Parametro("negociado", "no"));
+        listaParametro.add(new Parametro("ahesion", "no"));
+        listaParametro.add(new Parametro("negociado", "yes"));
         //ClausulaContrato
         listaParametro.add(new Parametro("PlanContinuidad", "yes"));
         listaParametro.add(new Parametro("TerminacionModificacion", "yes"));
@@ -151,7 +152,7 @@ public class LeerRed implements Serializable {
         listaParametro.add(new Parametro("HTTP", "no"));
         listaParametro.add(new Parametro("HTTPS", "no"));
         listaParametro.add(new Parametro("TLS", "no"));
-        listaParametro.add(new Parametro("SSH", "yes"));
+        listaParametro.add(new Parametro("SSH", "yes"));                
 
         LeerRed l = new LeerRed();
 
