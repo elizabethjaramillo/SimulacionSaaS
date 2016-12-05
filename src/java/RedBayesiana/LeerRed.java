@@ -45,7 +45,7 @@ public class LeerRed implements Serializable {
     public String LeerArchivo(List<Parametro> listaParametro) throws FileNotFoundException, ParserException, NonProjectablePotentialException, WrongCriterionException, ProbNodeNotFoundException, NotEvaluableNetworkException, IncompatibleEvidenceException, UnexpectedInferenceException, InvalidStateException {
         String parametro1 = listaParametro.get(0).getNombre();
         //InputStream file = new FileInputStream(new File(System.getProperty("user.dir") + "/src/java/archivo/" + nombrered));
-        InputStream file = new FileInputStream(new File("C:\\Users\\yef\\Documents\\NetBeansProjects\\redesbayesianassaas\\src\\java\\RedBayesiana\\" + bayesNetworkName));
+        InputStream file = new FileInputStream(new File("/home/glassfish/" + bayesNetworkName));
         PGMXReader reader = new PGMXReader();
         ProbNet prob = reader.loadProbNet(file, parametro1).getProbNet();
 //        ProbNet prob1 = reader.loadProbNet(file, "ahesion").getProbNet();
