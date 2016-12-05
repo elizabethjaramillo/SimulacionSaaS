@@ -174,8 +174,6 @@ public class UserWizard implements Serializable {
             Logger.getLogger(LeerRed.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
             Logger.getLogger(UserWizard.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(UserWizard.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
     }
