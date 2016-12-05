@@ -2,6 +2,7 @@
 import RedBayesiana.LeerRed;
 import RedBayesiana.Parametro;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -117,6 +118,16 @@ public class UserWizard implements Serializable {
         this.experiencia = experiencia;
     }
 
+    public String redireccion() {
+
+        try {
+            FacesContext.getCurrentInstance().getExternalContext().redirect("bibliografia.html");
+        } catch (IOException ex) {
+            Logger.getLogger(UserWizard.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+
     public String calcularProbabilidad() {
         List<Parametro> listaParametro = inicializar();
         listaParametro = cambiarEstado(listaParametro, tipocontrato);
@@ -139,9 +150,9 @@ public class UserWizard implements Serializable {
 
         try {
             System.out.println("*****");
-            String res=l.LeerArchivo(listaParametro);
-            Double porcentaje=Double.parseDouble(res)*100;
-            FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Confiabilidad Proveedor", "La confiabilidad es:"+res+"<br> Porcentaje:"+porcentaje+"%");
+            String res = l.LeerArchivo(listaParametro);
+            Double porcentaje = Double.parseDouble(res) * 100;
+            FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Confiabilidad Proveedor", "La confiabilidad es:" + res + "<br> Porcentaje:" + porcentaje + "%");
             RequestContext.getCurrentInstance().showMessageInDialog(message);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(LeerRed.class.getName()).log(Level.SEVERE, null, ex);
@@ -161,6 +172,10 @@ public class UserWizard implements Serializable {
             Logger.getLogger(LeerRed.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InvalidStateException ex) {
             Logger.getLogger(LeerRed.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(UserWizard.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(UserWizard.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
     }
