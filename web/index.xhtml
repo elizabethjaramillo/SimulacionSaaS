@@ -12,103 +12,105 @@
 
             <ui:define name="content">
                 <center><h2>VERIFICAR CONFIABILIDAD </h2>
-                <h:panelGrid id="panelAdministracionUsuario" columns="1" cellspacing="25px">
+                    <h:panelGrid id="panelAdministracionUsuario" columns="1" cellspacing="25px">
 
 
-                    <h:form id="frmDatosUsuario">
+                        <h:form id="frmDatosUsuario">
 
-                        <p:growl id="mensajeGeneral" showDetail="true" sticky="true"/>
-                        <p:wizard flowListener="#{userWizard.onFlowProcess}">
-                            <p:tab id="personal" title="Proveedor">
-                                <p:panel header="Información">                                    
-                                    <p:outputLabel value="Cuenta con un proveedor:"/>          
-                                    <p:selectOneRadio id="radioCuenta" value="#{userWizard.cuentaprovedor}">
-                                        <f:selectItem itemLabel="Si" itemValue="true"/> 
-                                        <f:selectItem itemLabel="No" itemValue="false"/>
-                                    </p:selectOneRadio>
-                                </p:panel>
-                            </p:tab>
-                            <p:tab id="detalles" title="Info Proveedor">
-                                <p:panel header="Contrato Detalles">                                    
-                                    <p:outputLabel value="Seleccione la experiencia del proveedor:"/>          
-                                    <h:panelGrid columns="2" columnClasses="label, value">                            
-                                        <p:selectOneRadio value="#{userWizard.experiencia}">
-                                            <f:selectItem itemLabel="0-2 años" itemValue="anos02" />
-                                            <f:selectItem itemLabel="3-5 años" itemValue="anos3_5" />
-                                            <f:selectItem itemLabel="5-10 años" itemValue="anos6_10" />
-                                            <f:selectItem itemLabel="más de 10 años" itemValue="mas10anos" />
-                                        </p:selectOneRadio>                                                                    
-                                    </h:panelGrid>
-                                    <p:outputLabel value="Tipo de Contrato:"/>          
-                                    <p:selectOneRadio  value="#{userWizard.tipocontrato}">
-                                        <f:selectItem itemLabel="Adhesion" itemValue="ahesion"/> 
-                                        <f:selectItem itemLabel="Negociada" itemValue="negociado"/>
-                                    </p:selectOneRadio>
-                                </p:panel>
-                            </p:tab>
-                            <p:tab id="clausulas" title="Clausulas">
-                                <p:panel header="CLAUSULAS DE CONTRATO">                                    
+                            <p:growl id="mensajeGeneral" showDetail="true" sticky="true"/>
+                            <p:wizard flowListener="#{userWizard.onFlowProcess}">
+                                <p:tab id="personal" title="Proveedor">
+                                    <p:panel header="Información">                                    
+                                        <p:outputLabel value="Cuenta con un proveedor:"/>          
+                                        <p:selectOneRadio id="radioCuenta" value="#{userWizard.cuentaprovedor}">
+                                            <f:selectItem itemLabel="Si" itemValue="true"/> 
+                                            <f:selectItem itemLabel="No" itemValue="false"/>
+                                        </p:selectOneRadio>
+                                    </p:panel>
+                                </p:tab>
+                                <p:tab id="detalles" title="Info Proveedor">
+                                    <p:panel header="Contrato Detalles">                                    
+                                        <p:outputLabel value="Seleccione la experiencia del proveedor:"/>          
+                                        <h:panelGrid columns="2" columnClasses="label, value">                            
+                                            <p:selectOneRadio value="#{userWizard.experiencia}">
+                                                <f:selectItem itemLabel="0-2 años" itemValue="anos02" />
+                                                <f:selectItem itemLabel="3-5 años" itemValue="anos3_5" />
+                                                <f:selectItem itemLabel="5-10 años" itemValue="anos6_10" />
+                                                <f:selectItem itemLabel="más de 10 años" itemValue="mas10anos" />
+                                            </p:selectOneRadio>                                                                    
+                                        </h:panelGrid>
+                                        <p:outputLabel value="Tipo de Contrato:"/>          
+                                        <p:selectOneRadio  value="#{userWizard.tipocontrato}">                                            
+                                            <f:selectItem id="adhesion" itemLabel="Adhesion" itemValue="ahesion" />                                             
+                                             <p:tooltip id="toolTipFade" for="adhesion" value="There are 4 options for position"/>
+                                            <f:selectItem itemLabel="Negociada" itemValue="negociado"/>
+                                            
+                                        </p:selectOneRadio>                                         
+                                    </p:panel>
+                                </p:tab>
+                                <p:tab id="clausulas" title="Clausulas">
+                                    <p:panel header="CLAUSULAS DE CONTRATO">                                    
 
-                                    <p:selectManyCheckbox id="clusua" value="#{userWizard.selectedClausulas}" layout="grid" columns="2">
-                                        <f:selectItem itemLabel="Plan continuidad" itemValue="PlanContinuidad" />
-                                        <f:selectItem itemLabel="Terminacion de Modificacion" itemValue="TerminacionModificacion" />
-                                        <f:selectItem itemLabel="Confidencialidad" itemValue="Confidencialida" />
-                                        <f:selectItem itemLabel="Disponibilidad" itemValue="Disponibilidad" />
-                                        <f:selectItem itemLabel="Rendimiento" itemValue="Rendimiento" />
-                                        <f:selectItem itemLabel="Suspencion de Servicio" itemValue="SuspencionS" />
-                                        <f:selectItem itemLabel="Servicio de Soporte" itemValue="ServicioSoporte" />
-                                        <f:selectItem itemLabel="Seguridad" itemValue="Seguridad" />
-                                        <f:selectItem itemLabel="Privacidad de Cumplimiento" itemValue="Privacidad" />
-                                        <f:selectItem itemLabel="Pagos" itemValue="Pagos" />
-                                    </p:selectManyCheckbox>
-                                </p:panel>
-                                <p:panel header="ACUERDO NIVEL SERVICIO">                                  
-                                    <p:selectManyCheckbox id="contratoA" value="#{userWizard.selectedAcuerdos}" layout="grid" columns="2">
-                                        <f:selectItem itemLabel="Recuperacion de datos" itemValue="recuperacionDatos" />
-                                        <f:selectItem itemLabel="Viabilidad a largo plazo" itemValue="ViabilidadLargoPlazo" />
-                                        <f:selectItem itemLabel="Acceso de usuarios privilegiados" itemValue="AccesoUsuarioPrivilegiado" />
-                                        <f:selectItem itemLabel="Ubicacion de Datos" itemValue="UbicacionDatos" />
-                                    </p:selectManyCheckbox>
-                                </p:panel>
-                            </p:tab>
-                            <p:tab id="adicionales" title="Cuestionamientos Adicionales">
-                                <p:panel header="Medidas de seguridad exigibles">                                    
-                                    <p:selectManyCheckbox id="medidadS" value="#{userWizard.clausulasAdicionales}" layout="grid" columns="2">
-                                        <f:selectItem itemLabel="Requerimiento de contraseña" itemValue="RequerimientoContraseña" />
-                                        <f:selectItem itemLabel="Restrigir numero e intentos" itemValue="RestrigirNIntento" />
-                                        <f:selectItem itemLabel="Certificado SSL" itemValue="PalabraClave" />
-                                        <f:selectItem itemLabel="Datos Cifrados" itemValue="CifradoSSL" />                                        
-                                        <f:selectItem itemLabel="MAC" itemValue="MAC" />
-                                        <f:selectItem itemLabel="Pregunta de Seguridad" itemValue="PreguntaSeguridad" />
-                                        <f:selectItem itemLabel="Lista Blanca de URL" itemValue="ListaBlancaURL" />
-                                        <f:selectItem itemLabel="OTL" itemValue="OTP" />
-                                        <f:selectItem itemLabel="SSO" itemValue="SSP" />                                        
-                                    </p:selectManyCheckbox>
+                                        <p:selectManyCheckbox id="clusua" value="#{userWizard.selectedClausulas}" layout="grid" columns="2">
+                                            <f:selectItem itemLabel="Plan continuidad" itemValue="PlanContinuidad" />
+                                            <f:selectItem itemLabel="Terminacion de Modificacion" itemValue="TerminacionModificacion" />
+                                            <f:selectItem itemLabel="Confidencialidad" itemValue="Confidencialida" />
+                                            <f:selectItem itemLabel="Disponibilidad" itemValue="Disponibilidad" />
+                                            <f:selectItem itemLabel="Rendimiento" itemValue="Rendimiento" />
+                                            <f:selectItem itemLabel="Suspencion de Servicio" itemValue="SuspencionS" />
+                                            <f:selectItem itemLabel="Servicio de Soporte" itemValue="ServicioSoporte" />
+                                            <f:selectItem itemLabel="Seguridad" itemValue="Seguridad" />
+                                            <f:selectItem itemLabel="Privacidad de Cumplimiento" itemValue="Privacidad" />
+                                            <f:selectItem itemLabel="Pagos" itemValue="Pagos" />
+                                        </p:selectManyCheckbox>
+                                    </p:panel>
+                                    <p:panel header="ACUERDO NIVEL SERVICIO">                                  
+                                        <p:selectManyCheckbox id="contratoA" value="#{userWizard.selectedAcuerdos}" layout="grid" columns="2">
+                                            <f:selectItem itemLabel="Recuperacion de datos" itemValue="recuperacionDatos" />
+                                            <f:selectItem itemLabel="Viabilidad a largo plazo" itemValue="ViabilidadLargoPlazo" />
+                                            <f:selectItem itemLabel="Acceso de usuarios privilegiados" itemValue="AccesoUsuarioPrivilegiado" />
+                                            <f:selectItem itemLabel="Ubicacion de Datos" itemValue="UbicacionDatos" />
+                                        </p:selectManyCheckbox>
+                                    </p:panel>
+                                </p:tab>
+                                <p:tab id="adicionales" title="Cuestionamientos Adicionales">
+                                    <p:panel header="Medidas de seguridad exigibles">                                    
+                                        <p:selectManyCheckbox id="medidadS" value="#{userWizard.clausulasAdicionales}" layout="grid" columns="2">
+                                            <f:selectItem itemLabel="Requerimiento de contraseña" itemValue="RequerimientoContraseña" />
+                                            <f:selectItem itemLabel="Restrigir numero e intentos" itemValue="RestrigirNIntento" />
+                                            <f:selectItem itemLabel="Certificado SSL" itemValue="PalabraClave" />
+                                            <f:selectItem itemLabel="Datos Cifrados" itemValue="CifradoSSL" />                                        
+                                            <f:selectItem itemLabel="MAC" itemValue="MAC" />
+                                            <f:selectItem itemLabel="Pregunta de Seguridad" itemValue="PreguntaSeguridad" />
+                                            <f:selectItem itemLabel="Lista Blanca de URL" itemValue="ListaBlancaURL" />
+                                            <f:selectItem itemLabel="OTL" itemValue="OTP" />
+                                            <f:selectItem itemLabel="SSO" itemValue="SSP" />                                        
+                                        </p:selectManyCheckbox>
                                     </p:panel>
                                     <p:panel header="Seleccionar Tipo de Exquema DB">
-                                    <h:panelGroup></h:panelGroup>                                      
-                                    <p:selectOneRadio id="exquemabd" value="#{userWizard.tipoEsquema}">
-                                        <f:selectItem itemLabel="STSI" itemValue="STSI" />
-                                        <f:selectItem itemLabel="ITSI" itemValue="ITSI" />
-                                        <f:selectItem itemLabel="IDII" itemValue="IDII" />
-                                    </p:selectOneRadio>
-                                    <h:panelGroup></h:panelGroup>
+                                        <h:panelGroup></h:panelGroup>                                      
+                                        <p:selectOneRadio id="exquemabd" value="#{userWizard.tipoEsquema}">
+                                            <f:selectItem itemLabel="STSI" itemValue="STSI" />
+                                            <f:selectItem itemLabel="ITSI" itemValue="ITSI" />
+                                            <f:selectItem itemLabel="IDII" itemValue="IDII" />
+                                        </p:selectOneRadio>
+                                        <h:panelGroup></h:panelGroup>
                                     </p:panel>
                                     <p:panel header="Seleccionar Protocolo de Tranferencia:">                                    
-                                    <p:selectOneRadio  id="protocolo" value="#{userWizard.protocolotransferencia}">
-                                        <f:selectItem itemLabel="HTTP" itemValue="HTTP" />
-                                        <f:selectItem itemLabel="HTTPS" itemValue="HTTPS" />
-                                        <f:selectItem itemLabel="TLS" itemValue="TLS" />
-                                        <f:selectItem itemLabel="SSH" itemValue="SSH" />
-                                    </p:selectOneRadio>
-                                    <h:panelGroup></h:panelGroup>
-                                    <p:commandButton value="Calcular" actionListener="#{userWizard.calcularProbabilidad()}" />
-                                </p:panel>
-                            </p:tab>
-                        </p:wizard>                     
-                    </h:form>
-                </h:panelGrid>
-                    </center><hr/>
+                                        <p:selectOneRadio  id="protocolo" value="#{userWizard.protocolotransferencia}">
+                                            <f:selectItem itemLabel="HTTP" itemValue="HTTP" />
+                                            <f:selectItem itemLabel="HTTPS" itemValue="HTTPS" />
+                                            <f:selectItem itemLabel="TLS" itemValue="TLS" />
+                                            <f:selectItem itemLabel="SSH" itemValue="SSH" />
+                                        </p:selectOneRadio>
+                                        <h:panelGroup></h:panelGroup>
+                                        <p:commandButton value="Calcular" actionListener="#{userWizard.calcularProbabilidad()}" />
+                                    </p:panel>
+                                </p:tab>
+                            </p:wizard>                     
+                        </h:form>
+                    </h:panelGrid>
+                </center><hr/>
             </ui:define>
         </ui:composition>
     </body>
