@@ -42,11 +42,25 @@
                                         <p:outputLabel value="Tipo de Contrato:"/>          
                                         <p:selectOneRadio  value="#{userWizard.tipocontrato}">                                            
                                             <f:selectItem id="adhesion" itemLabel="Adhesion" itemValue="ahesion" />                                             
-                                             <p:tooltip id="toolTipFade" for="adhesion" value="There are 4 options for position"/>
+                                            <p:tooltip id="toolTipFade" for="adhesion" value="There are 4 options for position"/>
                                             <f:selectItem itemLabel="Negociada" itemValue="negociado"/>
-                                            
+
                                         </p:selectOneRadio>                                         
+                                        <p:notificationBar position="top" effect="slide" styleClass="top" widgetVar="bar">
+                                            <h:outputText value="Proveedor" style="font-size:36px;" />
+                                            <h:outputText value="Tipo de Contrato"/>
+                                            <br></br>
+                                            <strong>Contrato negociado </strong> 
+                                            Permite flexibilidad, ofreciéndole al cliente la capacidad para fijar las condiciones de contratación en función del tipo de datos que se van a procesar, las medidas de seguridad exigibles, el esquema de subcontratación, la localización de los datos y la portabilidad de los mismos [1]. 
+                                            <br></br>
+                                            <strong>Contrato de adhesión </strong> s                                            
+                                            Está constituidos por cláusulas contractuales cerradas, sin que el usuario tenga ninguna opción para negociar sus términos [1].
+                                        </p:notificationBar>
+
+                                        <p:commandButton value="Detalle" onclick="PF('bar').show()" type="button" icon="ui-icon-arrow-1-s"/>
+                                        <p:commandButton value="Ocultar" onclick="PF('bar').hide()" type="button" icon="ui-icon-arrow-1-n"/>
                                     </p:panel>
+
                                 </p:tab>
                                 <p:tab id="clausulas" title="Clausulas">
                                     <p:panel header="CLAUSULAS DE CONTRATO">                                    
@@ -62,7 +76,7 @@
                                             <f:selectItem itemLabel="Seguridad" itemValue="Seguridad" />
                                             <f:selectItem itemLabel="Privacidad de Cumplimiento" itemValue="Privacidad" />
                                             <f:selectItem itemLabel="Pagos" itemValue="Pagos" />
-                                        </p:selectManyCheckbox>
+                                        </p:selectManyCheckbox>                                        
                                     </p:panel>
                                     <p:panel header="ACUERDO NIVEL SERVICIO">                                  
                                         <p:selectManyCheckbox id="contratoA" value="#{userWizard.selectedAcuerdos}" layout="grid" columns="2">
