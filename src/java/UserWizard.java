@@ -121,7 +121,7 @@ public class UserWizard implements Serializable {
     public String redireccion() {
 
         try {
-            FacesContext.getCurrentInstance().getExternalContext().redirect("bibliografia.html");
+            FacesContext.getCurrentInstance().getExternalContext().redirect("index.html");
         } catch (IOException ex) {
             Logger.getLogger(UserWizard.class.getName()).log(Level.SEVERE, null, ex);
         }
