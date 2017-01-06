@@ -29,10 +29,10 @@
                                              <f:ajax listener="#{userWizard.navigate}" />
                                         </p:selectOneRadio>
                                     </p:panel>                                                                
-                                    <p:panel header="EXPERIENCIA DEL PROVEEDOR">                                    
+                                    <p:panel header="EXPERIENCIA DEL PROVEEDOR" >                                    
                                         <p:outputLabel value="Seleccione la experiencia del proveedor:"/>                                                  
-                                        <h:panelGrid  layout="grid" columns="2" columnClasses="label, value">                            
-                                            <p:selectOneRadio value="#{userWizard.experiencia}" requiredMessage="El campo es requerido" required="true">
+                                        <h:panelGrid    columnClasses="label, value">                            
+                                            <p:selectOneRadio layout="grid" columns="2" value="#{userWizard.experiencia}" requiredMessage="El campo es requerido" required="true">
                                                 <f:selectItem itemLabel="0-2 años" itemValue="anos02" />
                                                 <f:selectItem itemLabel="3-5 años" itemValue="anos3_5" />
                                                 <f:selectItem itemLabel="5-10 años" itemValue="anos6_10" />
