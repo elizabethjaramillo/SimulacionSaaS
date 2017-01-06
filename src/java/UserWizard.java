@@ -127,6 +127,13 @@ public class UserWizard implements Serializable {
         }
         return null;
     }
+    public void navigate(){
+        System.out.println("proveedor"+cuentaprovedor);
+        if(cuentaprovedor==true) { 
+            FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Mensaje", "“Para hacer uso del simulador y calcular la confiabilidad del proveedor, debe contar con un posible proveedor”");
+            RequestContext.getCurrentInstance().showMessageInDialog(message);
+        }
+    }
 
     public String calcularProbabilidad() {
         List<Parametro> listaParametro = inicializar();

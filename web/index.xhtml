@@ -23,14 +23,15 @@
                                     <p:panel header="INFORMACIÓN">                                    
                                         <p:messages />
                                         <p:outputLabel value="Cuenta con un proveedor:"/>          
-                                        <p:selectOneRadio id="radioCuenta" value="#{userWizard.cuentaprovedor}" required="true">
+                                        <p:selectOneRadio id="radioCuenta" value="#{userWizard.cuentaprovedor}" required="true">                                            
                                             <f:selectItem itemLabel="Si" itemValue="false" /> 
                                             <f:selectItem itemLabel="No" itemValue="true"/>
+                                             <f:ajax listener="#{userWizard.navigate}" />
                                         </p:selectOneRadio>
                                     </p:panel>                                                                
                                     <p:panel header="EXPERIENCIA DEL PROVEEDOR">                                    
                                         <p:outputLabel value="Seleccione la experiencia del proveedor:"/>                                                  
-                                        <h:panelGrid columns="2" columnClasses="label, value">                            
+                                        <h:panelGrid  layout="grid" columns="2" columnClasses="label, value">                            
                                             <p:selectOneRadio value="#{userWizard.experiencia}" requiredMessage="El campo es requerido" required="true">
                                                 <f:selectItem itemLabel="0-2 años" itemValue="anos02" />
                                                 <f:selectItem itemLabel="3-5 años" itemValue="anos3_5" />
@@ -192,7 +193,7 @@
                                             <f:selectItem itemLabel="MAC" itemValue="MAC" />
                                             <f:selectItem itemLabel="Pregunta de Seguridad" itemValue="PreguntaSeguridad" />
                                             <f:selectItem itemLabel="Lista Blanca de URL" itemValue="ListaBlancaURL" />
-                                            <f:selectItem itemLabel="OTL" itemValue="OTP" />
+                                            <f:selectItem itemLabel="OTP" itemValue="OTP" />
                                             <f:selectItem itemLabel="SSO" itemValue="SSP" />                                        
                                         </p:selectManyCheckbox>
                                         <!-- DETALLE-->
