@@ -54,6 +54,11 @@
                                             <p:commandButton icon="ui-icon-info" onclick="PF('dialogExperienciaP').show()" type="button" />
                                         </h:form>
                                     </p:panel>
+                                    
+                                </p:tab>
+
+                                <p:tab id="clausulas" title="Contrato">
+                                    <p:messages />
                                     <p:panel header="TIPO DE CONTRATO">                                  
                                         <p:selectOneRadio  value="#{userWizard.tipocontrato}" id="TipoContrato" required="true" requiredMessage="El campo es requerido">                                            
                                             <f:selectItem id="adhesion" itemLabel="Adhesion" itemValue="ahesion" />                                             
@@ -84,11 +89,7 @@
                                             <p:commandButton icon="ui-icon-info" onclick="PF('dialogTipoContrato').show()" type="button" />
                                         </h:panelGrid>
                                     </p:panel>
-                                </p:tab>
-
-                                <p:tab id="clausulas" title="Contrato">
-                                    <p:panel header="CLAUSULAS DE CONTRATO">                                    
-                                        <p:messages />
+                                    <p:panel header="CLAUSULAS DE CONTRATO">                                                                            
                                         <p:selectManyCheckbox id="clusua" value="#{userWizard.selectedClausulas}" layout="grid" columns="2" required="true" requiredMessage="El campo es requerido">
                                             <f:selectItem itemLabel="Plan de Continuidad" itemValue="PlanContinuidad" />
                                             <f:selectItem itemLabel="Terminación o Modificación" itemValue="TerminacionModificacion" />
