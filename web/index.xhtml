@@ -18,7 +18,7 @@
                         <h:form id="frmDatosUsuario">
 
                             <p:growl id="mensajeGeneral" showDetail="true" sticky="true"/>
-                            <p:wizard flowListener="#{userWizard.onFlowProcess}">
+                            <p:wizard flowListener="#{userWizard.onFlowProcess}" nextLabel="Siguiente" backLabel="Atrás">
                                 <p:tab id="personal" title="Proveedor">
                                     <p:panel header="INFORMACIÓN">                                    
                                         <p:messages />
@@ -26,7 +26,7 @@
                                         <p:selectOneRadio id="radioCuenta" value="#{userWizard.cuentaprovedor}" required="true">                                            
                                             <f:selectItem itemLabel="Si" itemValue="false" /> 
                                             <f:selectItem itemLabel="No" itemValue="true"/>
-                                             <f:ajax listener="#{userWizard.navigate}" />
+                                            <f:ajax listener="#{userWizard.navigate}" />
                                         </p:selectOneRadio>
                                     </p:panel>                                                                
                                     <p:panel header="EXPERIENCIA DEL PROVEEDOR" >                                    
@@ -54,7 +54,7 @@
                                             <p:commandButton icon="ui-icon-info" onclick="PF('dialogExperienciaP').show()" type="button" />
                                         </h:form>
                                     </p:panel>
-                                    
+
                                 </p:tab>
 
                                 <p:tab id="clausulas" title="Contrato">
@@ -307,15 +307,25 @@
                                         <h:panelGrid columns="2">
                                             <p:commandButton value="Resultado" actionListener="#{userWizard.calcularProbabilidad}" />
                                         </h:panelGrid>
-                                    </p:panel>    
+                                    </p:panel> 
 
                                 </p:tab>
-                                
+
                             </p:wizard>                              
                             <p:commandButton value="Inicio" actionListener="#{userWizard.redireccion()}" />                                                        
                         </h:form>                        
                     </h:panelGrid>
-                </center><hr/>                
+                </center><hr/>   
+
+                <!-- FORMULARIO RESULTADO-->
+                <h:form id="frmResultado">
+                    <p:dialog widgetVar="dialogResultado" modal="true" showEffect="fade" hideEffect="explode" closable="false" style="background: thistle;">
+                        <h:panelGrid id="panelResultado" columns="1">
+                            <p:chart id="votes" type="pie" model="#{userWizard.livePieModel}" style="width:400px;height:300px" />
+                        </h:panelGrid>
+                    </p:dialog>
+                </h:form>
+
             </ui:define>
         </ui:composition>
     </body>

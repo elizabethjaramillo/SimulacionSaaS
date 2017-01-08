@@ -22,11 +22,14 @@ import org.openmarkov.core.exception.UnexpectedInferenceException;
 import org.openmarkov.core.exception.WrongCriterionException;
 import org.primefaces.context.RequestContext;
 import org.primefaces.event.FlowEvent;
+import org.primefaces.model.chart.PieChartModel;
 
 @ManagedBean
 @ViewScoped
 public class UserWizard implements Serializable {
 
+    private PieChartModel livePieModel;
+    private double porcentaje;
     private boolean skip;
     private boolean cuentaprovedor;
     private String tipocontrato;
@@ -158,9 +161,12 @@ public class UserWizard implements Serializable {
         try {
             System.out.println("*****");
             String res = l.LeerArchivo(listaParametro);
-            Double porcentaje = Double.parseDouble(res) * 100;
-            FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Confiabilidad Proveedor", "La confiabilidad es:" + res + "<br> Porcentaje:" + porcentaje + "%");
-            RequestContext.getCurrentInstance().showMessageInDialog(message);
+            porcentaje = Double.parseDouble(res) * 100;
+            setLivePieModel();
+            RequestContext.getCurrentInstance().update("frmResultado:panelResultado");
+            RequestContext.getCurrentInstance().execute("PF('dialogResultado').show()");
+//            FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Confiabilidad Proveedor", "La confiabilidad es:" + res + "<br> Porcentaje:" + porcentaje + "%");
+//            RequestContext.getCurrentInstance().showMessageInDialog(message);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(LeerRed.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ParserException ex) {
@@ -183,6 +189,22 @@ public class UserWizard implements Serializable {
             Logger.getLogger(UserWizard.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
+    }
+
+    public void setLivePieModel() {
+        int random1 = (int) porcentaje;
+        int random2 = 100 - random1;
+
+        livePieModel.getData().put("Confiabildad", random1);
+        livePieModel.getData().put("No comfiable", random2);
+
+        livePieModel.setTitle("Confiabilidad Proveedor");
+        livePieModel.setLegendPosition("ne");
+
+    }
+
+    public PieChartModel getLivePieModel() {
+        return livePieModel;
     }
 
     public List<Parametro> inicializar() {
