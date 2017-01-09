@@ -186,7 +186,7 @@
                                 <p:tab id="adicionales" title="Cuestionamientos Adicionales">
                                     <p:panel header="Medidas de seguridad exigibles">
                                         <p:messages />
-                                        <p:selectManyCheckbox id="medidadS" value="#{userWizard.clausulasAdicionales}" layout="grid" columns="2" required="true" requiredMessage="El campo es requerido">
+                                        <p:selectManyCheckbox id="medidadS" value="#{userWizard.clausulasAdicionales}" layout="grid" columns="2"  requiredMessage="El campo es requerido">
                                             <f:selectItem itemLabel="Requerimiento de contraseña" itemValue="RequerimientoContraseña" />
                                             <f:selectItem itemLabel="Restrigir número de intentos" itemValue="RestrigirNIntento" />
                                             <f:selectItem itemLabel="Certificado SSL" itemValue="PalabraClave" />
@@ -314,18 +314,18 @@
                             </p:wizard>                              
                             <p:commandButton value="Inicio" actionListener="#{userWizard.redireccion()}" />                                                        
                         </h:form>                        
-                    </h:panelGrid>
-                </center><hr/>   
+                   </h:panelGrid> 
+                </center>   
 
-                <!-- FORMULARIO RESULTADO-->
+                <h:panelGrid>
                 <h:form id="frmResultado">
                     <p:dialog widgetVar="dialogResultado" modal="true" showEffect="fade" hideEffect="explode" closable="false" style="background: thistle;">
                         <h:panelGrid id="panelResultado" columns="1">
-                            <p:chart id="votes" type="pie" model="#{userWizard.livePieModel}" style="width:400px;height:300px" />
+                            <!--<p:chart id="votes" type="pie" model="#{userWizard.livePieModel}" style="width:400px;height:300px" />-->
                         </h:panelGrid>
                     </p:dialog>
                 </h:form>
-
+                </h:panelGrid>
             </ui:define>
         </ui:composition>
     </body>

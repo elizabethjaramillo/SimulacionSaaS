@@ -162,11 +162,11 @@ public class UserWizard implements Serializable {
             System.out.println("*****");
             String res = l.LeerArchivo(listaParametro);
             porcentaje = Double.parseDouble(res) * 100;
-            setLivePieModel();
-            RequestContext.getCurrentInstance().update("frmResultado:panelResultado");
-            RequestContext.getCurrentInstance().execute("PF('dialogResultado').show()");
-//            FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Confiabilidad Proveedor", "La confiabilidad es:" + res + "<br> Porcentaje:" + porcentaje + "%");
-//            RequestContext.getCurrentInstance().showMessageInDialog(message);
+           // setLivePieModel();
+//            RequestContext.getCurrentInstance().update("frmResultado:panelResultado");
+//            RequestContext.getCurrentInstance().execute("PF('dialogResultado').show()");
+            FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Confiabilidad Proveedor", "La confiabilidad es:" + res + "<br> Porcentaje:" + porcentaje + "%");
+            RequestContext.getCurrentInstance().showMessageInDialog(message);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(LeerRed.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ParserException ex) {
