@@ -40,6 +40,13 @@ public class UserWizard implements Serializable {
     private String protocolotransferencia;
     private String experiencia;
 
+    public UserWizard() {
+        livePieModel.getData().put("Confiabildad", 100);
+        livePieModel.getData().put("No comfiable", 0);
+        livePieModel.setTitle("Confiabilidad Proveedor");
+        livePieModel.setLegendPosition("ne");
+    }
+
     public boolean isSkip() {
         return skip;
     }
@@ -130,9 +137,10 @@ public class UserWizard implements Serializable {
         }
         return null;
     }
-    public void navigate(){
-        System.out.println("proveedor"+cuentaprovedor);
-        if(cuentaprovedor==true) { 
+
+    public void navigate() {
+        System.out.println("proveedor" + cuentaprovedor);
+        if (cuentaprovedor == true) {
             FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Mensaje", "“Para hacer uso del simulador y calcular la confiabilidad del proveedor, debe contar con un posible proveedor”");
             RequestContext.getCurrentInstance().showMessageInDialog(message);
         }
@@ -162,7 +170,7 @@ public class UserWizard implements Serializable {
             System.out.println("*****");
             String res = l.LeerArchivo(listaParametro);
             porcentaje = Double.parseDouble(res) * 100;
-           // setLivePieModel();
+            // setLivePieModel();
 //            RequestContext.getCurrentInstance().update("frmResultado:panelResultado");
 //            RequestContext.getCurrentInstance().execute("PF('dialogResultado').show()");
             FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Confiabilidad Proveedor", "La confiabilidad es:" + res + "<br> Porcentaje:" + porcentaje + "%");
