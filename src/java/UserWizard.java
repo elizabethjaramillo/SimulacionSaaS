@@ -41,6 +41,7 @@ public class UserWizard implements Serializable {
     private String experiencia;
 
     public UserWizard() {
+        livePieModel=new PieChartModel();
         livePieModel.getData().put("Confiabildad", 100);
         livePieModel.getData().put("No comfiable", 0);
         livePieModel.setTitle("Confiabilidad Proveedor");
