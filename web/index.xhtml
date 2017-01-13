@@ -63,7 +63,7 @@
                                         <p:selectOneRadio  value="#{userWizard.tipocontrato}" id="TipoContrato" required="true" requiredMessage="El campo es requerido">                                            
                                             <f:selectItem id="adhesion" itemLabel="Adhesion" itemValue="ahesion" />                                             
                                             <p:tooltip id="toolTipFade" for="adhesion" value="There are 4 options for position"/>
-                                            <f:selectItem itemLabel="Negociada" itemValue="negociado"/>
+                                            <f:selectItem itemLabel="Negociado" itemValue="negociado"/>
                                         </p:selectOneRadio>                                         
                                         <!-- DETALLE -->
                                         <h:panelGrid  columns="2">
@@ -90,7 +90,7 @@
                                         </h:panelGrid>
                                     </p:panel>
                                     <p:panel header="CLAUSULAS DE CONTRATO">                                                                            
-                                        <p:selectManyCheckbox id="clusua" value="#{userWizard.selectedClausulas}" layout="grid" columns="2" required="true" requiredMessage="El campo es requerido">
+                                        <p:selectManyCheckbox id="clusua" value="#{userWizard.selectedClausulas}" layout="grid" columns="2"  requiredMessage="El campo es requerido">
                                             <f:selectItem itemLabel="Plan de Continuidad" itemValue="PlanContinuidad" />
                                             <f:selectItem itemLabel="Terminación o Modificación" itemValue="TerminacionModificacion" />
                                             <f:selectItem itemLabel="Confidencialidad" itemValue="Confidencialida" />
@@ -145,12 +145,12 @@
                                             <p:commandButton icon="ui-icon-info" onclick="PF('dialogClausuala').show()" type="button" />
                                         </h:form>
                                     </p:panel>
-                                    <p:panel header="ACUERDO NIVEL SERVICIO">                                  
-                                        <p:selectManyCheckbox id="contratoA" value="#{userWizard.selectedAcuerdos}" layout="grid" columns="2" required="true" requiredMessage="El campo es requerido">
-                                            <f:selectItem itemLabel="Recuperacion de datos" itemValue="recuperacionDatos" />
+                                    <p:panel header="ACUERDO DE NIVEL DE SERVICIO,">                                  
+                                        <p:selectManyCheckbox id="contratoA" value="#{userWizard.selectedAcuerdos}" layout="grid" columns="2" >
+                                            <f:selectItem itemLabel="Recuperacion de los datos" itemValue="recuperacionDatos" />
                                             <f:selectItem itemLabel="Viabilidad a largo plazo" itemValue="ViabilidadLargoPlazo" />
                                             <f:selectItem itemLabel="Acceso de usuarios privilegiados" itemValue="AccesoUsuarioPrivilegiado" />
-                                            <f:selectItem itemLabel="Ubicacion de Datos" itemValue="UbicacionDatos" />
+                                            <f:selectItem itemLabel="Ubicacion de los datos" itemValue="UbicacionDatos" />
                                         </p:selectManyCheckbox>
                                         <!-- DETALLE-->
                                         <h:form>
@@ -237,7 +237,7 @@
                                             <p:commandButton icon="ui-icon-info" onclick="PF('dialogCuestionamientoA').show()" type="button" />
                                         </h:form>
                                     </p:panel>
-                                    <p:panel header="Tipo de Exquema DB">
+                                    <p:panel header="ESQUEMA DE BASE DE DATOS">
                                         <h:panelGroup></h:panelGroup>                                      
                                         <p:selectOneRadio id="exquemabd" value="#{userWizard.tipoEsquema}" required="true" requiredMessage="El campo es requerido">
                                             <f:selectItem itemLabel="STSI" itemValue="STSI" />
@@ -266,10 +266,11 @@
                                                     </p> 
                                                 </h:panelGrid>
                                             </p:dialog>
-                                            <p:commandButton icon="ui-icon-info" onclick="PF('dialogEsquemaBD').show()" type="button" />
+                                            <p:commandButton id="fade" icon="ui-icon-info" onclick="PF('dialogEsquemaBD').show()" type="button" />
+                                            <p:tooltip id="toolTipFade" for="fade" value="Más información" />
                                         </h:form>
                                     </p:panel>
-                                    <p:panel header="Protocolo de Tranferencia:" >                                    
+                                    <p:panel header="Protocolo de Transferencia:" >                                    
                                         <p:selectOneRadio  id="protocolo" value="#{userWizard.protocolotransferencia}" layout="grid" columns="2" required="true" requiredMessage="El campo es requerido">
                                             <f:selectItem itemLabel="HTTP" itemValue="HTTP" />
                                             <f:selectItem itemLabel="HTTPS" itemValue="HTTPS" />
