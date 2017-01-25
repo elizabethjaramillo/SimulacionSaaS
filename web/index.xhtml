@@ -59,12 +59,14 @@
 
                                 <p:tab id="clausulas" title="Contrato">
                                     <p:messages />
-                                    <p:panel header="TIPO DE CONTRATO">                                  
-                                        <p:selectOneRadio  value="#{userWizard.tipocontrato}" id="TipoContrato" required="true" requiredMessage="El campo es requerido">                                            
-                                            <f:selectItem id="adhesion" itemLabel="Adhesion" itemValue="ahesion" />                                             
-                                            <p:tooltip id="toolTipFade" for="adhesion" value="There are 4 options for position"/>
-                                            <f:selectItem itemLabel="Negociado" itemValue="negociado"/>
-                                        </p:selectOneRadio>                                         
+                                    <p:panel header="TIPO DE CONTRATO">    
+                                        <h:form>
+                                            <p:selectOneRadio  value="#{userWizard.tipocontrato}" id="TipoContrato" required="true" requiredMessage="El campo es requerido">                                            
+                                                <f:selectItem id="adhesion" itemLabel="Adhesion" itemValue="ahesion" />                                             
+                                                <p:tooltip id="toolTipFade" for="adhesion" value="There are 4 options for position"/>
+                                                <f:selectItem itemLabel="Negociado" itemValue="negociado"/>
+                                            </p:selectOneRadio>   
+                                        </h:form>
                                         <!-- DETALLE -->
                                         <h:panelGrid  columns="2">
                                             <p:dialog widgetVar="dialogTipoContrato" modal="true" hideEffect="explode" closable="true" width="500">
@@ -85,190 +87,73 @@
                                                         opción para negociar sus términos [1].
                                                     </p> 
                                                 </h:panelGrid>
-                                            </p:dialog>
-                                            <p:commandButton icon="ui-icon-info" onclick="PF('dialogTipoContrato').show()" type="button" />
+                                            </p:dialog> 
+                                            <h:commandButton value="i" action="#{userWizard.redirect}" />
                                         </h:panelGrid>
-                                    </p:panel>
-                                    <p:panel header="CLAUSULAS DE CONTRATO">                                                                            
-                                        <p:selectManyCheckbox id="clusua" value="#{userWizard.selectedClausulas}" layout="grid" columns="2"  requiredMessage="El campo es requerido">
-                                            <f:selectItem itemLabel="Plan de Continuidad" itemValue="PlanContinuidad" />
-                                            <f:selectItem itemLabel="Terminación o Modificación" itemValue="TerminacionModificacion" />
-                                            <f:selectItem itemLabel="Confidencialidad" itemValue="Confidencialida" />
-                                            <f:selectItem itemLabel="Disponibilidad" itemValue="Disponibilidad" />
-                                            <f:selectItem itemLabel="Rendimiento" itemValue="Rendimiento" />
-                                            <f:selectItem itemLabel="Suspencion de Servicio" itemValue="SuspencionS" />
-                                            <f:selectItem itemLabel="Servicio de Soporte" itemValue="ServicioSoporte" />
-                                            <f:selectItem itemLabel="Seguridad" itemValue="Seguridad" />
-                                            <f:selectItem itemLabel="Privacidad y cumplimiento normativo" itemValue="Privacidad" />
-                                            <f:selectItem itemLabel="Pagos" itemValue="Pagos" />
-                                        </p:selectManyCheckbox>   
-                                        <!-- DETALLE-->
+                                    </p:panel>                                                                        
+                                    <p:panel header="CLAUSULAS DE CONTRATO"> 
                                         <h:form>
-                                            <p:dialog widgetVar="dialogClausuala" modal="true" hideEffect="explode" closable="true" width="85%">
-                                                <h:panelGrid columns="1">
-                                                    <center>
-                                                        <h:outputText value="Cláusulas en el Contrato" style="font-size:25px;" />
-                                                    </center>
-                                                    <p style="text-align: justify;">
-                                                        <strong>Confidencialidad </strong> 
-                                                        Fundamentalmente en las operaciones de traslado de datos y almacenamiento en servidores [1][2][3].
-                                                        <br></br> 
-                                                        <strong>Disponibilidad </strong> 
-                                                        Esta cláusula especifica el nivel de disponibilidad que el proveedor de servicios se compromete a mantener [1][2][3].
-                                                        <br></br> 
-                                                        <strong>Rendimiento </strong> 
-                                                        Este apartado asegura que se alcanzan los niveles de potencia de cálculo, almacenamiento y ancho de banda contratados con el proveedor de servicios  [1][2][3].
-                                                        <br></br> 
-                                                        <strong>Plan de Continuidad de Negocio y Recuperación ante desastres  </strong> 
-                                                        Es conveniente que el proveedor cuente con este documento que este operativo y actualizado [1][2][3].
-                                                        <br></br> 
-                                                        <strong>Pagos </strong> 
-                                                        Esta sección contiene los detalles de los pagos que debe realizar el cliente para usar los servicios contratados. Debe incluir claramente la cantidad y la periodicidad de dichos pagos [1][2][3].
-                                                        <br></br> 
-                                                        <strong>Suspensión del servicio</strong> 
-                                                        Esta cláusula indica al cliente que es posible que se suspenda momentáneamente el servicio debido a actualizaciones en su infraestructura informática [1][2][3].
-                                                        <br></br> 
-                                                        <strong>Servicios de soporte</strong> 
-                                                        Esta sección contendrá los compromisos del proveedor de servicios en cuanto al soporte prestado al cliente. Es importante que el contrato especifique el tiempo que el proveedor requiere para recuperar el sistema cuando se ha producido un error [1][2][3].
-                                                        <br></br> 
-                                                        <strong>Terminación o modificación</strong> 
-                                                        Las características de SaaS permiten una gran flexibilidad a la hora de modificar los servicios que el cliente necesita. El acuerdo legal debe contener claramente las opciones de modificación del contrato o terminación del mismo, sobre todo en lo relativo a recuperación y borrado de la información [1][2][3]. 
-                                                        <br></br> 
-                                                        <strong>Privacidad y cumplimiento normativo</strong> 
-                                                        Esta cláusula define el nivel de compromiso del proveedor de servicios con el cumplimiento de las leyes en especial las relativas a la privacidad y protección de datos [1][2][3].
-                                                        <br></br> 
-                                                        <strong> Experiencia del proveedor</strong> 
-                                                        Es importante trabajar con un proveedor que ofrezca seguridad con una larga experiencia en el campo de implantación de sistemas SaaS [3].
-                                                    </p> 
-                                                </h:panelGrid>
-                                            </p:dialog>
-                                            <p:commandButton icon="ui-icon-info" onclick="PF('dialogClausuala').show()" type="button" />
+                                            <p:selectManyCheckbox id="clusua" value="#{userWizard.selectedClausulas}" layout="grid" columns="2"  requiredMessage="El campo es requerido">
+                                                <f:selectItem itemLabel="Plan de Continuidad" itemValue="PlanContinuidad" />
+                                                <f:selectItem itemLabel="Terminación o Modificación" itemValue="TerminacionModificacion" />
+                                                <f:selectItem itemLabel="Confidencialidad" itemValue="Confidencialida" />
+                                                <f:selectItem itemLabel="Disponibilidad" itemValue="Disponibilidad" />
+                                                <f:selectItem itemLabel="Rendimiento" itemValue="Rendimiento" />
+                                                <f:selectItem itemLabel="Suspencion de Servicio" itemValue="SuspencionS" />
+                                                <f:selectItem itemLabel="Servicio de Soporte" itemValue="ServicioSoporte" />
+                                                <f:selectItem itemLabel="Seguridad" itemValue="Seguridad" />
+                                                <f:selectItem itemLabel="Privacidad y cumplimiento normativo" itemValue="Privacidad" />
+                                                <f:selectItem itemLabel="Pagos" itemValue="Pagos" />
+                                            </p:selectManyCheckbox>   
                                         </h:form>
+                                        <!-- DETALLE-->                                        
+                                        <h:commandButton value="i" action="#{userWizard.redirect}" />
                                     </p:panel>
-                                    <p:panel header="ACUERDO DE NIVEL DE SERVICIO,">                                  
+                                    <p:panel header="ACUERDO DE NIVEL DE SERVICIO,">    
+                                        <h:form>
                                         <p:selectManyCheckbox id="contratoA" value="#{userWizard.selectedAcuerdos}" layout="grid" columns="2" >
                                             <f:selectItem itemLabel="Recuperacion de los datos" itemValue="recuperacionDatos" />
                                             <f:selectItem itemLabel="Viabilidad a largo plazo" itemValue="ViabilidadLargoPlazo" />
                                             <f:selectItem itemLabel="Acceso de usuarios privilegiados" itemValue="AccesoUsuarioPrivilegiado" />
                                             <f:selectItem itemLabel="Ubicacion de los datos" itemValue="UbicacionDatos" />
                                         </p:selectManyCheckbox>
-                                        <!-- DETALLE-->
-                                        <h:form>
-                                            <p:dialog widgetVar="dialogAcuerdoNS" modal="true" hideEffect="explode" closable="true" width="85%">
-                                                <h:panelGrid columns="1">
-                                                    <center>
-                                                        <h:outputText value="Acuerdo de Nivel de Servicio" style="font-size:25px;" />
-                                                    </center>
-                                                    <p style="text-align: justify;">
-                                                        SLA es un acuerdo o un vínculo jurídico entre el proveedor y las instituciones en el contexto de la prestación de un servicio en particular, los SLA se han convertido en una parte importante del modelo de prestación de servicios de la nube [4] [5] [6], los clientes y los proveedores de SaaS deben establecer un SLA para definir la calidad de servicio (QoS) [7].
-                                                    </p>
-                                                    <p style="text-align: justify;">
-                                                        <strong>Recuperación de los datos</strong> 
-                                                        El cliente tendrá que asegurarse que el proveedor está en la capacidad de hacer una restauración completa de los datos, y cuánto tiempo tomará en realizar dicha actividad [8] [9].
-                                                        <br></br> 
-                                                        <strong>Viabilidad a largo plazo </strong> 
-                                                        Pedir al proveedor que nos hagan conocer cómo se recuperan los datos en caso que el proveedor vaya a la quiebra o sea adquirida por otra gran empresa, si la información es entregada a la nueva empresa propietaria o es entregada en primera instancia al cliente, además se debe tener en cuenta que los datos recuperados estén en un formato que permita importar a una aplicación de reemplazo [8] [9].
-                                                        <br></br> 
-                                                        <strong>Acceso de usuarios privilegiados  </strong> 
-                                                        Pedir a los proveedores suministrar información específica sobre la contratación y supervisión de los administradores privilegiados, y sobre los controles de acceso realizados [8] [9].
-                                                        <br></br> 
-                                                        <strong>Ubicación de los datos </strong> 
-                                                        Los proveedores deberían comprometerse con el almacenamiento y procesamiento de datos en jurisdicciones específicas, y si van a hacer un compromiso contractual para obedecer los requisitos de privacidad locales en nombre de sus clientes [8] [9].
-                                                        <br></br> 
-                                                    </p> 
-                                                </h:panelGrid>
-                                            </p:dialog>
-                                            <p:commandButton icon="ui-icon-info" onclick="PF('dialogAcuerdoNS').show()" type="button" />
                                         </h:form>
+                                        <h:commandButton value="i" action="#{userWizard.sla()}" />
+                                        
                                     </p:panel>
                                 </p:tab>
 
                                 <p:tab id="adicionales" title="Cuestionamientos Adicionales">
                                     <p:panel header="Medidas de seguridad exigibles">
-                                        <p:messages />
-                                        <p:selectManyCheckbox id="medidadS" value="#{userWizard.clausulasAdicionales}" layout="grid" columns="2"  requiredMessage="El campo es requerido">
-                                            <f:selectItem itemLabel="Requerimiento de contraseña" itemValue="RequerimientoContraseña" />
-                                            <f:selectItem itemLabel="Restrigir número de intentos" itemValue="RestrigirNIntento" />
-                                            <f:selectItem itemLabel="Certificado SSL" itemValue="PalabraClave" />
-                                            <f:selectItem itemLabel="Datos Cifrados" itemValue="CifradoSSL" />                                        
-                                            <f:selectItem itemLabel="MAC" itemValue="MAC" />
-                                            <f:selectItem itemLabel="Pregunta de Seguridad" itemValue="PreguntaSeguridad" />
-                                            <f:selectItem itemLabel="Lista Blanca de URL" itemValue="ListaBlancaURL" />
-                                            <f:selectItem itemLabel="OTP" itemValue="OTP" />
-                                            <f:selectItem itemLabel="SSO" itemValue="SSP" />                                        
-                                        </p:selectManyCheckbox>
-                                        <!-- DETALLE-->
                                         <h:form>
-                                            <p:dialog widgetVar="dialogCuestionamientoA" modal="true" hideEffect="explode" closable="true" width="95%">
-                                                <h:panelGrid columns="1">
-                                                    <center>
-                                                        <h:outputText value="Cuestionamientos adicionales" style="font-size:25px;" />
-                                                    </center>
-                                                    <p style="text-align: justify;">
-                                                        <strong>Restringir el número de intentos</strong> 
-                                                        Una forma de defenderse del ataque de fuerza bruta es restringir el número de intentos de autentificación [10].
-                                                        <br></br> 
-                                                        <strong>Requerimiento de contraseña</strong>
-                                                        Para evitar el ataque de fuerza bruta se debe contar con una compleja combinación de usuario/contraseña [10].
-                                                        <br></br> 
-                                                        <strong>Palabras clave</strong>
-                                                        Los datos están bajo la amenaza de ser manipulados por cualquier interceptor no autorizado, las palabras clave es una medida para no dejar que nadie manipule nuestros datos [10].
-                                                        <br></br> 
-                                                        <strong>Cifrado SSL</strong>
-                                                        Los datos están bajo la amenaza de ser manipulados por cualquier interceptor no autorizado, el cifrado SSL es una medida para no dejar que nadie manipule nuestros datos. [11]
-                                                        <br></br> 
-                                                        <strong>Código de autenticación de mensaje (MAC)</strong>
-                                                        MAC son algoritmos criptográficos simétricos, que proporcionan integridad de los datos permitiendo el reconocimiento de cualquier modificación o manipulación del mensaje durante la transmisión y la autenticación de origen de los datos, suministrando la confirmación de que el mensaje se originó por el remitente [12].
-                                                        <br></br> 
-                                                        <strong>Pregunta de seguridad</strong>
-                                                        Para proteger los datos se deberá realizar una pregunta de seguridad a los usuarios cuya respuesta sólo la sabe el usuario autorizado, por lo que el usuario no autorizado no podrá acceder a los datos incluso después de tener las credenciales de ingreso correctas.
-                                                        <br></br> 
-                                                        <strong>Contraseña de un solo uso (OTP)</strong>
-                                                        Este código se genera de forma dinámica sólo con fines de uso único y tienen una vida útil limitada utilizable. Tras el uso, la contraseña será invalidada por el cliente y el servidor del sistema de autenticación [15] [16].
-                                                        <br></br> 
-                                                        <strong>Inicio de sesión único (SSO)</strong>
-                                                        De forma general, el uso de la autenticación SSO se lleva a cabo utilizando un tercero de confianza denominado proveedor de identidad (IdP). Cuando un usuario utiliza su agente de usuario (UA), a través  un navegador web, para solicitar un inicio de sesión al proveedor de servicio, en vez de pedir nombre de usuario y contraseña, el servicio emite una solicitud de emergencia y redirecciona al cliente IdP. Después de la autenticación correcta, el IdP emite un token de autenticación firmado y redirige al cliente de SaaS, donde se validará el token y el usuario conectado [17] [18] [19] [20]. 
-                                                        <br></br> 
-                                                        <strong>Lista blanca de direcciones URL</strong>
-                                                        El proveedor de servicios de la nube (CSP) restringe el acceso al sistema solo para el conjunto de lista blanca de direcciones URL. Esta forma de proteger la identidad del usuario es eficiente ya que incluso si un intruso posee las credenciales legítimas no podrá ingresar al sistema debido a que la URL no se encuentra almacenada en los registros del CSP, razón por la cual el acceso se desactivará [17].
-                                                    </p> 
-                                                </h:panelGrid>
-                                            </p:dialog>
-                                            <p:commandButton icon="ui-icon-info" onclick="PF('dialogCuestionamientoA').show()" type="button" />
+                                            <p:messages />
+                                            <p:selectManyCheckbox id="medidadS" value="#{userWizard.clausulasAdicionales}" layout="grid" columns="2"  requiredMessage="El campo es requerido">
+                                                <f:selectItem itemLabel="Requerimiento de contraseña" itemValue="RequerimientoContraseña" />
+                                                <f:selectItem itemLabel="Restrigir número de intentos" itemValue="RestrigirNIntento" />
+                                                <f:selectItem itemLabel="Certificado SSL" itemValue="PalabraClave" />
+                                                <f:selectItem itemLabel="Datos Cifrados" itemValue="CifradoSSL" />                                        
+                                                <f:selectItem itemLabel="MAC" itemValue="MAC" />
+                                                <f:selectItem itemLabel="Pregunta de Seguridad" itemValue="PreguntaSeguridad" />
+                                                <f:selectItem itemLabel="Lista Blanca de URL" itemValue="ListaBlancaURL" />
+                                                <f:selectItem itemLabel="OTP" itemValue="OTP" />
+                                                <f:selectItem itemLabel="SSO" itemValue="SSP" />                                        
+                                            </p:selectManyCheckbox>
                                         </h:form>
+                                        <h:commandButton value="i" action="#{userWizard.riesgos()}" />
+                                        <!-- DETALLE-->                                        
                                     </p:panel>
                                     <p:panel header="ESQUEMA DE BASE DE DATOS">
                                         <h:panelGroup></h:panelGroup>                                      
-                                        <p:selectOneRadio id="exquemabd" value="#{userWizard.tipoEsquema}" required="true" requiredMessage="El campo es requerido">
-                                            <f:selectItem itemLabel="STSI" itemValue="STSI" />
-                                            <f:selectItem itemLabel="ITSI" itemValue="ITSI" />
-                                            <f:selectItem itemLabel="IDII" itemValue="IDII" />
-                                        </p:selectOneRadio>
-                                        <h:panelGroup></h:panelGroup>
-                                        <!-- DETALLE-->
                                         <h:form>
-                                            <p:dialog widgetVar="dialogEsquemaBD" modal="true" hideEffect="explode" closable="true" width="500">
-                                                <h:panelGrid columns="1">
-                                                    <center>
-                                                        <h:outputText value="Esquema de Base de Datos" style="font-size:25px;" />
-                                                    </center>
-                                                    <p style="text-align: justify;">
-                                                        <strong>IDII</strong> 
-                                                        Esquema de base de datos para la gestión de datos Multi-Tenant: base de datos independientes e instancias de base de datos independientes (IDII) [13]. 
-                                                        <br></br>
-                                                        El esquema que es catalogado como el más seguro pero el más costoso, es IDII [13] [14], en este esquema existe para el almacenamiento una base de datos (BD) para cada inquilino, este es el método más sencillo para proporcionar un buen aislamiento y seguridad de datos [25], sería ideal que un proveedor de servicios ofrezca este esquema de BD.
-                                                        <br></br> 
-                                                        <strong>ITSI</strong> 
-                                                        Esquema de base de datos para la gestión de datos Multi-Tenant: tablas independientes e instancias de base de datos compartidos (ITSI) [13].
-                                                        <br></br> 
-                                                        <strong>STSI</strong> 
-                                                        Esquema de base de datos para la gestión de datos Multi-Tenant: tablas compartidas e instancias de base de datos compartidos (STSI) [13].
-                                                    </p> 
-                                                </h:panelGrid>
-                                            </p:dialog>
-                                            <p:commandButton id="fade" icon="ui-icon-info" onclick="PF('dialogEsquemaBD').show()" type="button" />
-                                            <p:tooltip id="toolTipFade" for="fade" value="Más información" />
+                                            <p:selectOneRadio id="exquemabd" value="#{userWizard.tipoEsquema}" required="true" requiredMessage="El campo es requerido">
+                                                <f:selectItem itemLabel="STSI" itemValue="STSI" />
+                                                <f:selectItem itemLabel="ITSI" itemValue="ITSI" />
+                                                <f:selectItem itemLabel="IDII" itemValue="IDII" />
+                                            </p:selectOneRadio>
+                                            <h:commandButton value="i" action="#{userWizard.vulne()}" />
                                         </h:form>
+                                        <h:panelGroup></h:panelGroup>
+                                        <p:tooltip id="toolTipFade" for="fade" value="Más información" />                                        
                                     </p:panel>
                                     <p:panel header="Protocolo de Transferencia:" >                                    
                                         <p:selectOneRadio  id="protocolo" value="#{userWizard.protocolotransferencia}" layout="grid" columns="2" required="true" requiredMessage="El campo es requerido">
@@ -315,17 +200,18 @@
                             </p:wizard>                              
                             <p:commandButton value="Inicio" actionListener="#{userWizard.redireccion()}" />                                                        
                         </h:form>                        
-                   </h:panelGrid> 
+                    </h:panelGrid> 
                 </center>   
 
                 <h:panelGrid>
-                <h:form id="frmResultado">
-                    <p:dialog widgetVar="dialogResultado" modal="true" showEffect="fade" hideEffect="explode" closable="false" style="background: thistle;">
-                        <h:panelGrid id="panelResultado" columns="1">
-                            <!--<p:chart id="votes" type="pie" model="#{userWizard.livePieModel}" style="width:400px;height:300px" />-->
-                        </h:panelGrid>
-                    </p:dialog>
-                </h:form>
+                    <h:form id="frmResultado">
+                        <p:dialog widgetVar="dialogResultado" modal="true" showEffect="fade" hideEffect="explode" closable="false" style="background: thistle;">
+                            <h:panelGrid id="panelResultado" columns="1">
+                                <!--<p:chart id="votes" type="pie" model="#{userWizard.livePieModel}" style="width:400px;height:300px" />-->
+                            </h:panelGrid>
+                        </p:dialog>
+                    </h:form>
+
                 </h:panelGrid>
             </ui:define>
         </ui:composition>

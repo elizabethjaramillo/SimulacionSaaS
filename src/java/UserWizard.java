@@ -11,6 +11,7 @@ import java.util.logging.Logger;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
+import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 import org.openmarkov.core.exception.IncompatibleEvidenceException;
 import org.openmarkov.core.exception.InvalidStateException;
@@ -41,11 +42,11 @@ public class UserWizard implements Serializable {
     private String experiencia;
 
     public UserWizard() {
-        livePieModel=new PieChartModel();
-        livePieModel.getData().put("Confiabildad", 100);
-        livePieModel.getData().put("No comfiable", 0);
-        livePieModel.setTitle("Confiabilidad Proveedor");
-        livePieModel.setLegendPosition("ne");
+//        livePieModel=new PieChartModel();
+//        livePieModel.getData().put("Confiabildad", 100);
+//        livePieModel.getData().put("No comfiable", 0);
+//        livePieModel.setTitle("Confiabilidad Proveedor");
+//        livePieModel.setLegendPosition("ne");
     }
 
     public boolean isSkip() {
@@ -129,14 +130,41 @@ public class UserWizard implements Serializable {
         this.experiencia = experiencia;
     }
 
-    public String redireccion() {
+    public void redireccion() {
 
         try {
-            FacesContext.getCurrentInstance().getExternalContext().redirect("index.html");
+            FacesContext.getCurrentInstance().getExternalContext().redirect("/");
         } catch (IOException ex) {
             Logger.getLogger(UserWizard.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return null;
+    }
+
+    public void redirect() throws IOException {
+        // ...
+
+        ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
+        externalContext.redirect("http://localhost:8080/SimulacionSaaS/faces/index.html#contrato");
+    }
+
+    public void sla() throws IOException {
+        // ...
+
+        ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
+        externalContext.redirect("http://localhost:8080/SimulacionSaaS/faces/index.html#sla");
+    }
+
+    public void riesgos() throws IOException {
+        // ...
+
+        ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
+        externalContext.redirect("http://localhost:8080/SimulacionSaaS/faces/index.html#sla");
+    }
+
+    public void vulne() throws IOException {
+        // ...
+
+        ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
+        externalContext.redirect("http://localhost:8080/SimulacionSaaS/faces/index.html#vulnerabilidades");
     }
 
     public void navigate() {
