@@ -143,28 +143,41 @@ public class UserWizard implements Serializable {
         // ...
 
         ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
-        externalContext.redirect("http://localhost:8080/SimulacionSaaS/faces/index.html#contrato");
+        externalContext.redirect("http://localhost:8080/SimulacionSaaS/faces/index.html#sec1");
     }
+      public void redirect2() throws IOException {
+        // ...
+
+        ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
+        externalContext.redirect("http://localhost:8080/SimulacionSaaS/faces/index.html#sec2");
+    }
+public void redirect3() throws IOException {
+        // ...
+
+        ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
+        externalContext.redirect("http://localhost:8080/SimulacionSaaS/faces/index.html#sec3");
+    }
+
 
     public void sla() throws IOException {
         // ...
 
         ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
-        externalContext.redirect("http://localhost:8080/SimulacionSaaS/faces/index.html#sla");
+        externalContext.redirect("http://localhost:8080/SimulacionSaaS/faces/index.html#sec4");
     }
 
     public void riesgos() throws IOException {
         // ...
 
         ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
-        externalContext.redirect("http://localhost:8080/SimulacionSaaS/faces/index.html#sla");
+        externalContext.redirect("http://localhost:8080/SimulacionSaaS/faces/index.html#sec5");
     }
 
     public void vulne() throws IOException {
         // ...
 
         ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
-        externalContext.redirect("http://localhost:8080/SimulacionSaaS/faces/index.html#vulnerabilidades");
+        externalContext.redirect("http://localhost:8080/SimulacionSaaS/faces/index.html#sec6");
     }
 
     public void navigate() {

@@ -29,30 +29,19 @@
                                             <f:ajax listener="#{userWizard.navigate}" />
                                         </p:selectOneRadio>
                                     </p:panel>                                                                
-                                    <p:panel header="EXPERIENCIA DEL PROVEEDOR" >                                    
-                                        <p:outputLabel value="Seleccione la experiencia del proveedor:"/>                                                  
-                                        <h:panelGrid    columnClasses="label, value">                            
-                                            <p:selectOneRadio layout="grid" columns="2" value="#{userWizard.experiencia}" requiredMessage="El campo es requerido" required="true">
-                                                <f:selectItem itemLabel="0-2 años" itemValue="anos02" />
-                                                <f:selectItem itemLabel="3-5 años" itemValue="anos3_5" />
-                                                <f:selectItem itemLabel="5-10 años" itemValue="anos6_10" />
-                                                <f:selectItem itemLabel="más de 10 años" itemValue="mas10anos" />
-                                            </p:selectOneRadio>      
-                                        </h:panelGrid>
-                                        <!-- DETALLE-->
+                                    <p:panel header="EXPERIENCIA DEL PROVEEDOR" >      
                                         <h:form>
-                                            <p:dialog widgetVar="dialogExperienciaP" modal="true" hideEffect="explode" closable="true" width="500">
-                                                <h:panelGrid columns="1">
-                                                    <center>
-                                                        <h:outputText value="Experiencia del proveedor" style="font-size:25px;" />
-                                                    </center>
-                                                    <p style="text-align: justify;">
-                                                        Es importante trabajar con un proveedor que ofrezca seguridad con una larga experiencia en el campo de implantación de sistemas SaaS [3].
-                                                    </p> 
-                                                </h:panelGrid>
-                                            </p:dialog>
-                                            <p:commandButton icon="ui-icon-info" onclick="PF('dialogExperienciaP').show()" type="button" />
-                                        </h:form>
+                                            <p:outputLabel value="Seleccione la experiencia del proveedor:"/>                                                  
+                                            <h:panelGrid    columnClasses="label, value">                            
+                                                <p:selectOneRadio layout="grid" columns="2" value="#{userWizard.experiencia}" requiredMessage="El campo es requerido" required="true">
+                                                    <f:selectItem itemLabel="0-2 años" itemValue="anos02" />
+                                                    <f:selectItem itemLabel="3-5 años" itemValue="anos3_5" />
+                                                    <f:selectItem itemLabel="5-10 años" itemValue="anos6_10" />
+                                                    <f:selectItem itemLabel="más de 10 años" itemValue="mas10anos" />
+                                                </p:selectOneRadio>      
+                                            </h:panelGrid>
+                                        </h:form>   
+                                        <h:commandLink  value="i" action="#{userWizard.redirect}" target="_blank"></h:commandLink>
                                     </p:panel>
 
                                 </p:tab>
@@ -66,30 +55,8 @@
                                                 <p:tooltip id="toolTipFade" for="adhesion" value="There are 4 options for position"/>
                                                 <f:selectItem itemLabel="Negociado" itemValue="negociado"/>
                                             </p:selectOneRadio>   
-                                        </h:form>
-                                        <!-- DETALLE -->
-                                        <h:panelGrid  columns="2">
-                                            <p:dialog widgetVar="dialogTipoContrato" modal="true" hideEffect="explode" closable="true" width="500">
-                                                <h:panelGrid  columns="1">
-                                                    <center>
-                                                        <h:outputText value="Tipo de Contrato" style="font-size:25px;" />
-                                                    </center>
-                                                    <p style="text-align: justify;">
-                                                        <strong>Contrato negociado </strong> 
-                                                        Permite flexibilidad, ofreciéndole al cliente la capacidad para fijar las condiciones de 
-                                                        contratación en función del tipo de datos que se van a procesar, las medidas de seguridad
-                                                        exigibles, el esquema de subcontratación, la localización de los datos y la portabilidad 
-                                                        de los mismos [1]. 
-                                                    </p> 
-                                                    <p style="text-align: justify;">
-                                                        <strong>Contrato de adhesión</strong> 
-                                                        Está constituidos por cláusulas contractuales cerradas, sin que el usuario tenga ninguna 
-                                                        opción para negociar sus términos [1].
-                                                    </p> 
-                                                </h:panelGrid>
-                                            </p:dialog> 
-                                            <h:commandButton value="i" action="#{userWizard.redirect}" />
-                                        </h:panelGrid>
+                                        </h:form>  
+                                           <h:commandLink  value="i" action="#{userWizard.redirect2}" target="_blank"></h:commandLink>                                        
                                     </p:panel>                                                                        
                                     <p:panel header="CLAUSULAS DE CONTRATO"> 
                                         <h:form>
@@ -107,19 +74,18 @@
                                             </p:selectManyCheckbox>   
                                         </h:form>
                                         <!-- DETALLE-->                                        
-                                        <h:commandButton value="i" action="#{userWizard.redirect}" />
+                                        <h:commandLink  value="i" action="#{userWizard.redirect3}" target="_blank"></h:commandLink>                                        
                                     </p:panel>
                                     <p:panel header="ACUERDO DE NIVEL DE SERVICIO,">    
                                         <h:form>
-                                        <p:selectManyCheckbox id="contratoA" value="#{userWizard.selectedAcuerdos}" layout="grid" columns="2" >
-                                            <f:selectItem itemLabel="Recuperacion de los datos" itemValue="recuperacionDatos" />
-                                            <f:selectItem itemLabel="Viabilidad a largo plazo" itemValue="ViabilidadLargoPlazo" />
-                                            <f:selectItem itemLabel="Acceso de usuarios privilegiados" itemValue="AccesoUsuarioPrivilegiado" />
-                                            <f:selectItem itemLabel="Ubicacion de los datos" itemValue="UbicacionDatos" />
-                                        </p:selectManyCheckbox>
-                                        </h:form>
-                                        <h:commandButton value="i" action="#{userWizard.sla()}" />
-                                        
+                                            <p:selectManyCheckbox id="contratoA" value="#{userWizard.selectedAcuerdos}" layout="grid" columns="2" >
+                                                <f:selectItem itemLabel="Recuperacion de los datos" itemValue="recuperacionDatos" />
+                                                <f:selectItem itemLabel="Viabilidad a largo plazo" itemValue="ViabilidadLargoPlazo" />
+                                                <f:selectItem itemLabel="Acceso de usuarios privilegiados" itemValue="AccesoUsuarioPrivilegiado" />
+                                                <f:selectItem itemLabel="Ubicacion de los datos" itemValue="UbicacionDatos" />
+                                            </p:selectManyCheckbox>
+                                        </h:form>                                        
+                                        <h:commandLink  value="i" action="#{userWizard.sla}" target="_blank"></h:commandLink>                                        
                                     </p:panel>
                                 </p:tab>
 
@@ -139,7 +105,7 @@
                                                 <f:selectItem itemLabel="SSO" itemValue="SSP" />                                        
                                             </p:selectManyCheckbox>
                                         </h:form>
-                                        <h:commandButton value="i" action="#{userWizard.riesgos()}" />
+                                        <h:commandLink  value="i" action="#{userWizard.riesgos}" target="_blank"></h:commandLink>                                                                                
                                         <!-- DETALLE-->                                        
                                     </p:panel>
                                     <p:panel header="ESQUEMA DE BASE DE DATOS">
@@ -149,8 +115,8 @@
                                                 <f:selectItem itemLabel="STSI" itemValue="STSI" />
                                                 <f:selectItem itemLabel="ITSI" itemValue="ITSI" />
                                                 <f:selectItem itemLabel="IDII" itemValue="IDII" />
-                                            </p:selectOneRadio>
-                                            <h:commandButton value="i" action="#{userWizard.vulne()}" />
+                                            </p:selectOneRadio>                                            
+                                            <h:commandLink  value="i" action="#{userWizard.vulne}" target="_blank"></h:commandLink>                                        
                                         </h:form>
                                         <h:panelGroup></h:panelGroup>
                                         <p:tooltip id="toolTipFade" for="fade" value="Más información" />                                        
