@@ -32,7 +32,7 @@ public class UserWizard implements Serializable {
     private PieChartModel livePieModel;
     private double porcentaje;
     private boolean skip;
-    private boolean cuentaprovedor=true;
+    private boolean cuentaprovedor=false;
     private String tipocontrato;
     private String[] selectedClausulas;
     private String[] selectedAcuerdos;
