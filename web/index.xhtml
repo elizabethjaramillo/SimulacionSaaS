@@ -51,12 +51,11 @@
                                     <p:panel header="TIPO DE CONTRATO">    
                                         <h:form>
                                             <p:selectOneRadio  value="#{userWizard.tipocontrato}" id="TipoContrato" required="true" requiredMessage="El campo es requerido">                                            
-                                                <f:selectItem id="adhesion" itemLabel="Adhesion" itemValue="ahesion" />                                             
-                                                <p:tooltip id="toolTipFade" for="adhesion" value="There are 4 options for position"/>
+                                                <f:selectItem id="adhesion" itemLabel="Adhesion" itemValue="ahesion" />                                                                                             
                                                 <f:selectItem itemLabel="Negociado" itemValue="negociado"/>
                                             </p:selectOneRadio>   
                                         </h:form>  
-                                           <h:commandLink  value="i" action="#{userWizard.redirect2}" target="_blank"></h:commandLink>                                        
+                                        <h:commandLink  value="i" action="#{userWizard.redirect2}" target="_blank"></h:commandLink>                                        
                                     </p:panel>                                                                        
                                     <p:panel header="CLAUSULAS DE CONTRATO"> 
                                         <h:form>
@@ -115,11 +114,9 @@
                                                 <f:selectItem itemLabel="STSI" itemValue="STSI" />
                                                 <f:selectItem itemLabel="ITSI" itemValue="ITSI" />
                                                 <f:selectItem itemLabel="IDII" itemValue="IDII" />
-                                            </p:selectOneRadio>                                            
-                                            <h:commandLink  value="i" action="#{userWizard.vulne}" target="_blank"></h:commandLink>                                        
+                                            </p:selectOneRadio>                                                                                       
                                         </h:form>
-                                        <h:panelGroup></h:panelGroup>
-                                        <p:tooltip id="toolTipFade" for="fade" value="Más información" />                                        
+                                        <h:commandLink  value="i" action="#{userWizard.vulne}" target="_blank"></h:commandLink>                                        
                                     </p:panel>
                                     <p:panel header="Protocolo de Transferencia:" >                                    
                                         <p:selectOneRadio  id="protocolo" value="#{userWizard.protocolotransferencia}" layout="grid" columns="2" required="true" requiredMessage="El campo es requerido">
@@ -151,8 +148,7 @@
                                                         Es un protocolo de comunicación seguro, considerado un protocolo criptográfico anfitrión [24].
                                                     </p> 
                                                 </h:panelGrid>
-                                            </p:dialog>
-                                            <p:commandButton icon="ui-icon-info" onclick="PF('dialogProtocoloTD').show()" type="button" />
+                                            </p:dialog>                                            
                                         </h:form>
                                     </p:panel>
                                     <p:panel header="" >

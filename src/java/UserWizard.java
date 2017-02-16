@@ -145,19 +145,20 @@ public class UserWizard implements Serializable {
         ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
         externalContext.redirect("http://localhost:8080/SimulacionSaaS/faces/index.html#sec1");
     }
-      public void redirect2() throws IOException {
+
+    public void redirect2() throws IOException {
         // ...
 
         ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
         externalContext.redirect("http://localhost:8080/SimulacionSaaS/faces/index.html#sec2");
     }
-public void redirect3() throws IOException {
+
+    public void redirect3() throws IOException {
         // ...
 
         ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
         externalContext.redirect("http://localhost:8080/SimulacionSaaS/faces/index.html#sec3");
     }
-
 
     public void sla() throws IOException {
         // ...
