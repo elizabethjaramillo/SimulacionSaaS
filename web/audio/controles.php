@@ -1,1 +1,0 @@
-$("#proveedor option[value="+ valor +"]").attr("selected",true);
